@@ -198,6 +198,8 @@ namespace bowling_kai
                 {
                     score.frame = 10 + score.roll1;
                     lbl1_sum.Text = score.frame.ToString();
+
+                    cmb2_2.Enabled = true;
                 }
             }
             //どれでもなかった場合
@@ -209,6 +211,11 @@ namespace bowling_kai
                     score.frame = 10 + score.game;
 
                     cmb2_2.Enabled = false;
+                }
+                //1投目がストライクではなかった場合
+                else
+                {
+                    cmb2_2.Enabled = true;
                 }
             }
         }
@@ -240,7 +247,10 @@ namespace bowling_kai
             {
                 score.game = score.roll1 + score.roll2 + score.frame;
 
-                lbl2_sum.Text = score.game.ToString();
+                if (cmb2_2.Text != "/")
+                {
+                    lbl2_sum.Text = score.game.ToString();
+                }
             }
         }
 
@@ -285,7 +295,7 @@ namespace bowling_kai
                 //1投目がストライクではなかった場合
                 else
                 {
-                    score.frame = 10 + score.roll1;
+                    score.frame = score.roll1 + score.game;
                     lbl2_sum.Text = score.frame.ToString();
                 }
             }
@@ -295,7 +305,12 @@ namespace bowling_kai
                 //1投目がストライクだった場合
                 if(cmb3_1.Text == "X")
                 {
-
+                    score.frame = 10 + score.game;
+                    cmb3_2.Enabled = false;
+                }
+                else
+                {
+                    cmb3_2.Enabled = true;
                 }
             }
         }
@@ -362,10 +377,7 @@ namespace bowling_kai
             //前フレームの1投目がストライクではなかった場合
             else
             {
-                score.frame = score.game;
                 score.game = score.roll1 + score.roll2 + score.frame;
-
-                score.frame = score.frame - score.roll1 - score.roll2;      //加算対策
 
                 lbl3_sum.Text = score.game.ToString();
             }
