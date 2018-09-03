@@ -773,6 +773,7 @@
             this.cmb1_1.Name = "cmb1_1";
             this.cmb1_1.Size = new System.Drawing.Size(33, 24);
             this.cmb1_1.TabIndex = 1;
+            this.cmb1_1.SelectedIndexChanged += new System.EventHandler(this.cmb1_1_SelectedIndexChanged);
             // 
             // pnl1_sum
             // 

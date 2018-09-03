@@ -14,14 +14,26 @@ namespace bowling_kai
 
     struct Score
     {
-        //1投目
+        /// <summary>
+        /// 1投目
+        /// </summary>
         public int roll1;
-        //2投目
+        /// <summary>
+        /// 2投目
+        /// </summary>
         public int roll2;
-        //3投目(10フレームのみ使用)
+        /// <summary>
+        /// 3投目(10フレームのみ使用)
+        /// </summary>
         public int roll3;
-        //合計値
+        /// <summary>
+        /// 1フレームの合計値
+        /// </summary>
         public int score;
+        /// <summary>
+        /// 1ゲームの合計値
+        /// </summary>
+        public int total;
     }
 
     #endregion
@@ -36,6 +48,34 @@ namespace bowling_kai
             InitializeComponent();
         }
 
+        /// <summary>
+        /// 構造体の宣言
+        /// </summary>
+        Score score;
+
+        /// <summary>
+        /// 1投目のスコア
+        /// </summary>
+        public string Roll1
+        {
+            set
+            {
+                if (value == "X")
+                {
+                    this.score.roll1 = 10;
+                }
+                else if (value == "G")
+                {
+                    this.score.roll1 = 0;
+                }
+                else
+                {
+                    this.score.roll1 = int.Parse(value);
+                }
+            }
+        }
+
+
         #region イベント
 
         /// <summary>
@@ -45,6 +85,21 @@ namespace bowling_kai
         {
             //コンボボックス初期化処理
             Print();
+        }
+
+        /// <summary>
+        /// コンボボックス1_1選択時
+        /// </summary>
+        private void cmb1_1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //2投目から入力した場合の初期化処理
+            lbl1f.Text = "";
+            cmb1_2.SelectedIndex = -1;
+            
+            //プロパティを呼び出す
+            Roll1 = cmb1_1.Text;
+            
+
         }
 
         #endregion
