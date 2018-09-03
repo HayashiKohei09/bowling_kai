@@ -29,11 +29,11 @@ namespace bowling_kai
         /// <summary>
         /// 1フレームの合計値
         /// </summary>
-        public int score;
+        public int frame;
         /// <summary>
         /// 1ゲームの合計値
         /// </summary>
-        public int total;
+        public int game;
     }
 
     #endregion
@@ -75,6 +75,28 @@ namespace bowling_kai
             }
         }
 
+        /// <summary>
+        /// 2投目のスコア
+        /// </summary>
+        public string Roll2
+        {
+            set
+            {
+                if(value == "/")
+                {
+                    this.score.roll2 = 10 - score.roll1;
+                }
+                else if(value == "-")
+                {
+                    this.score.roll2 = 0;
+                }
+                else
+                {
+                    this.score.roll2 = int.Parse(value);
+                }
+            }
+        }
+
 
         #region イベント
 
@@ -93,13 +115,260 @@ namespace bowling_kai
         private void cmb1_1_SelectedIndexChanged(object sender, EventArgs e)
         {
             //2投目から入力した場合の初期化処理
-            lbl1f.Text = "";
-            cmb1_2.SelectedIndex = -1;
-            
+            lbl1_sum.Text = "";
+            cmb1_2.Text = "";
+
             //プロパティを呼び出す
             Roll1 = cmb1_1.Text;
-            
 
+            //1投目がストライクだった場合、2投目は入力できないようにする処理
+            if (cmb1_1.Text == "X")
+            {
+                cmb1_2.Enabled = false;
+            }
+            else
+            {
+                cmb1_2.Enabled = true;
+            }
+
+            score.frame = score.roll1;
+            score.game = score.frame;
+        }
+
+        /// <summary>
+        /// コンボボックス1_2選択時
+        /// </summary>
+        private void cmb1_2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //プロパティを呼び出す
+            Roll1 = cmb1_1.Text;
+            Roll2 = cmb1_2.Text;
+
+            score.frame = score.roll1 + score.roll2;
+            score.game = score.frame;
+
+            //2投目がスペアではなかった場合、1フレームの合計値を出力
+            if (cmb1_2.Text != "/")
+            {
+                lbl1_sum.Text = score.game.ToString();
+            }
+            else
+            {
+                lbl1_sum.Text = "";
+            }
+        }
+
+        /// <summary>
+        /// コンボボックス2_1選択時
+        /// </summary>
+        private void cmb2_1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //2投目から入力した場合の初期化処理
+            lbl2_sum.Text = "";
+            cmb2_2.Text = "";
+
+            //プロパティを呼び出す
+            Roll1 = cmb2_1.Text;
+
+            //前フレームの1投目がストライクだった場合
+            if(cmb1_1.Text == "X")
+            {
+                //1投目がストライクだった場合 ダブル
+                if(cmb2_1.Text == "X")
+                {
+                    score.frame = 10 + score.roll1;
+                    cmb2_2.Enabled = false;
+                }
+            }
+            //前フレームの2投目がスペアだった場合
+            else if(cmb1_2.Text == "/")
+            {
+                //1投目がストライクだった場合
+                if (cmb2_1.Text == "X")
+                {
+                    score.frame = score.roll1;
+
+                    score.game = score.roll1 + score.frame;
+                    lbl1_sum.Text = score.game.ToString();
+
+                    cmb2_2.Enabled = false;
+                }
+                //1投目がストライクではなかった場合
+                else
+                {
+                    score.frame = 10 + score.roll1;
+                    lbl1_sum.Text = score.frame.ToString();
+                }
+            }
+            //どれでもなかった場合
+            else
+            {
+                //1投目がストライクだった場合
+                if (cmb2_1.Text == "X")
+                {
+                    score.frame = 10 + score.game;
+
+                    cmb2_2.Enabled = false;
+                }
+            }
+        }
+
+        /// <summary>
+        /// コンボボックス2_2選択時
+        /// </summary>
+        private void cmb2_2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //プロパティを呼び出す
+            Roll1 = cmb2_1.Text;
+            Roll2 = cmb2_2.Text;
+
+            //前フレームの1投目がストライクだった場合
+            if (cmb1_1.Text == "X")
+            {
+                score.game = 10 + score.roll1 + score.roll2;
+                lbl1_sum.Text = score.game.ToString();
+
+                //2投目がスペアではなかった場合
+                if (cmb2_2.Text != "/")
+                {
+                    score.game += score.roll1 + score.roll2;
+                    lbl2_sum.Text = score.game.ToString();
+                }
+            }
+            //前フレームの1投目がストライクではなかった場合
+            else
+            {
+                score.game = score.roll1 + score.roll2 + score.frame;
+
+                lbl2_sum.Text = score.game.ToString();
+            }
+        }
+
+        /// <summary>
+        /// コンボボックス3_1選択時
+        /// </summary>
+        private void cmb3_1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //2投目から入力した場合の初期化処理
+            lbl3_sum.Text = "";
+            cmb3_2.Text = "";
+
+            //プロパティを呼び出す
+            Roll1 = cmb3_1.Text;
+
+            //前フレームの1投目がストライクだった場合
+            if (cmb2_1.Text == "X")
+            {
+                //前々フレームの1投目がストライクだった場合　ダブル
+                if (cmb1_1.Text == "X")
+                {
+                    score.frame = 10 + score.roll1 + score.game;
+                    lbl1_sum.Text = score.frame.ToString();
+                }
+                //前々フレームの1投目がストライクではなかった場合
+                else
+                {
+                    score.frame = 10 + score.game;
+                }
+            }
+            //前フレームの2投目がスペアだった場合
+            else if (cmb2_2.Text == "/")
+            {
+                //1投目がストライクだった場合
+                if (cmb3_1.Text == "X")
+                {
+                    score.frame = score.roll1;
+
+                    score.game = score.roll1 + score.frame;
+                    lbl2_sum.Text = score.game.ToString();
+                }
+                //1投目がストライクではなかった場合
+                else
+                {
+                    score.frame = 10 + score.roll1;
+                    lbl2_sum.Text = score.frame.ToString();
+                }
+            }
+            //どれでもなかった場合
+            else
+            {
+                //1投目がストライクだった場合
+                if(cmb3_1.Text == "X")
+                {
+
+                }
+            }
+        }
+
+        /// <summary>
+        /// コンボボックス3_2選択時
+        /// </summary>
+        private void cmb3_2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //プロパティを呼び出す
+            Roll1 = cmb3_1.Text;
+            Roll2 = cmb3_2.Text;
+
+            //前フレームの1投目がストライクだった場合
+            if(cmb2_1.Text == "X")
+            {
+                //前々フレームの1投目がストライクだった場合　ダブル
+                if(cmb1_1.Text == "X")
+                {
+                    //lbl2_sumに出力
+                    score.game = 10 + score.roll1 + score.roll2 + score.frame;
+                    lbl2_sum.Text = score.game.ToString();
+
+                    //lbl3_sumに出力
+                    score.frame = score.game;
+                    score.game = score.roll1 + score.roll2 + score.frame;
+                    score.frame = score.frame - 10 - score.roll1 - score.roll2; //加算対策
+
+                    //2投目がスペアだった場合
+                    if (cmb3_2.Text == "/")
+                    {
+                        lbl3_sum.Text = "";
+                    }
+                    //2投目がスペアではなかった場合
+                    else
+                    {
+                        lbl3_sum.Text = score.game.ToString();
+                    }
+                }
+                //前々フレームの1投目がストライクではなかった場合
+                else
+                {
+                    //lbl2_sumに出力
+                    score.game = score.roll1 + score.roll2 + score.frame;
+                    lbl2_sum.Text = score.game.ToString();
+
+                    //lbl3_sumに出力
+                    score.frame = score.game;
+                    score.game = score.roll1 + score.roll2 + score.frame;
+
+                    //2投目がスペアだった場合
+                    if (cmb3_2.Text == "/")
+                    {
+                        lbl3_sum.Text = "";
+                    }
+                    //2投目がスペアではなかった場合
+                    else
+                    {
+                        lbl3_sum.Text = score.game.ToString();
+                    }
+                    score.frame = score.frame - score.roll1 - score.roll2;  //加算対策
+                }
+            }
+            //前フレームの1投目がストライクではなかった場合
+            else
+            {
+                score.frame = score.game;
+                score.game = score.roll1 + score.roll2 + score.frame;
+
+                score.frame = score.frame - score.roll1 - score.roll2;      //加算対策
+
+                lbl3_sum.Text = score.game.ToString();
+            }
         }
 
         #endregion
@@ -112,7 +381,7 @@ namespace bowling_kai
         /// </summary>
         private void Print()
         {
-            int i = 0;
+            int i = 1;
 
             //0～9までの数字を印字。
             while(i<10)

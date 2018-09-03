@@ -602,6 +602,7 @@
             this.cmb3_2.Name = "cmb3_2";
             this.cmb3_2.Size = new System.Drawing.Size(33, 24);
             this.cmb3_2.TabIndex = 6;
+            this.cmb3_2.SelectedIndexChanged += new System.EventHandler(this.cmb3_2_SelectedIndexChanged);
             // 
             // pnl4_1
             // 
@@ -659,6 +660,7 @@
             this.cmb2_2.Name = "cmb2_2";
             this.cmb2_2.Size = new System.Drawing.Size(33, 24);
             this.cmb2_2.TabIndex = 4;
+            this.cmb2_2.SelectedIndexChanged += new System.EventHandler(this.cmb2_2_SelectedIndexChanged);
             // 
             // pnl3_1
             // 
@@ -678,6 +680,7 @@
             this.cmb3_1.Name = "cmb3_1";
             this.cmb3_1.Size = new System.Drawing.Size(33, 24);
             this.cmb3_1.TabIndex = 5;
+            this.cmb3_1.SelectedIndexChanged += new System.EventHandler(this.cmb3_1_SelectedIndexChanged);
             // 
             // pnl3_sum
             // 
@@ -716,6 +719,7 @@
             this.cmb1_2.Name = "cmb1_2";
             this.cmb1_2.Size = new System.Drawing.Size(33, 24);
             this.cmb1_2.TabIndex = 2;
+            this.cmb1_2.SelectedIndexChanged += new System.EventHandler(this.cmb1_2_SelectedIndexChanged);
             // 
             // pnl2_1
             // 
@@ -735,6 +739,7 @@
             this.cmb2_1.Name = "cmb2_1";
             this.cmb2_1.Size = new System.Drawing.Size(33, 24);
             this.cmb2_1.TabIndex = 3;
+            this.cmb2_1.SelectedIndexChanged += new System.EventHandler(this.cmb2_1_SelectedIndexChanged);
             // 
             // pnl2_sum
             // 
