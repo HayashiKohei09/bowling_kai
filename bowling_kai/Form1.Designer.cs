@@ -215,6 +215,7 @@
             // 
             // cmb10_3
             // 
+            this.cmb10_3.Enabled = false;
             this.cmb10_3.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.cmb10_3.FormattingEnabled = true;
             this.cmb10_3.ItemHeight = 16;
@@ -234,6 +235,7 @@
             // 
             // cmb10_2
             // 
+            this.cmb10_2.Enabled = false;
             this.cmb10_2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.cmb10_2.FormattingEnabled = true;
             this.cmb10_2.ItemHeight = 16;
@@ -253,6 +255,7 @@
             // 
             // cmb9_2
             // 
+            this.cmb9_2.Enabled = false;
             this.cmb9_2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.cmb9_2.FormattingEnabled = true;
             this.cmb9_2.ItemHeight = 16;
@@ -310,6 +313,7 @@
             // 
             // cmb8_2
             // 
+            this.cmb8_2.Enabled = false;
             this.cmb8_2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.cmb8_2.FormattingEnabled = true;
             this.cmb8_2.ItemHeight = 16;
@@ -367,6 +371,7 @@
             // 
             // cmb7_2
             // 
+            this.cmb7_2.Enabled = false;
             this.cmb7_2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.cmb7_2.FormattingEnabled = true;
             this.cmb7_2.ItemHeight = 16;
@@ -424,6 +429,7 @@
             // 
             // cmb6_2
             // 
+            this.cmb6_2.Enabled = false;
             this.cmb6_2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.cmb6_2.FormattingEnabled = true;
             this.cmb6_2.ItemHeight = 16;
@@ -481,6 +487,7 @@
             // 
             // cmb5_2
             // 
+            this.cmb5_2.Enabled = false;
             this.cmb5_2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.cmb5_2.FormattingEnabled = true;
             this.cmb5_2.ItemHeight = 16;
@@ -538,6 +545,7 @@
             // 
             // cmb4_2
             // 
+            this.cmb4_2.Enabled = false;
             this.cmb4_2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.cmb4_2.FormattingEnabled = true;
             this.cmb4_2.ItemHeight = 16;
@@ -545,6 +553,7 @@
             this.cmb4_2.Name = "cmb4_2";
             this.cmb4_2.Size = new System.Drawing.Size(33, 24);
             this.cmb4_2.TabIndex = 8;
+            this.cmb4_2.SelectedIndexChanged += new System.EventHandler(this.cmb4_2_SelectedIndexChanged);
             // 
             // pnl5_1
             // 
@@ -595,6 +604,7 @@
             // 
             // cmb3_2
             // 
+            this.cmb3_2.Enabled = false;
             this.cmb3_2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.cmb3_2.FormattingEnabled = true;
             this.cmb3_2.ItemHeight = 16;
@@ -622,6 +632,7 @@
             this.cmb4_1.Name = "cmb4_1";
             this.cmb4_1.Size = new System.Drawing.Size(33, 24);
             this.cmb4_1.TabIndex = 7;
+            this.cmb4_1.SelectedIndexChanged += new System.EventHandler(this.cmb4_1_SelectedIndexChanged);
             // 
             // pnl4_sum
             // 
@@ -653,6 +664,7 @@
             // 
             // cmb2_2
             // 
+            this.cmb2_2.Enabled = false;
             this.cmb2_2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.cmb2_2.FormattingEnabled = true;
             this.cmb2_2.ItemHeight = 16;
@@ -712,6 +724,7 @@
             // 
             // cmb1_2
             // 
+            this.cmb1_2.Enabled = false;
             this.cmb1_2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.cmb1_2.FormattingEnabled = true;
             this.cmb1_2.ItemHeight = 16;
