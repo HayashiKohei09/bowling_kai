@@ -187,7 +187,7 @@ namespace bowling_kai
                     //前々フレームの1投目がストライクではなかった場合、2フレーム目の合計値を蓄積(ダブル)
                     else
                     {
-                        _total = _frame;
+                        _frame = _score[4] + _total;
                     }
                 }
                 //前フレームの2投目がスペアだった場合
@@ -242,7 +242,7 @@ namespace bowling_kai
                 //前々フレームの1投目がストライクだった場合、ダブルのボーナス点を追加
                 if (cmb1_1.Text == "X")
                 {
-                    _total = 10 + _score[4] + _score[5] + _frame;
+                    _total = _score[3] + _score[4] + _score[5] + _frame;
                     lbl2_sum.Text = _total.ToString();
 
                     _total = _score[4] + _score[5] + _total;
@@ -279,7 +279,65 @@ namespace bowling_kai
         /// </summary>
         private void cmb4_1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            lbl4_sum.Text = "";
 
+            //スコア代入処理(1投目の添え字は適当)
+            _score[6] = Point(cmb4_1.Text, 0);
+
+            //1投目がストライクだった場合、2投目選択不可
+            if (cmb4_1.Text == "X")
+            {
+                cmb4_2.Enabled = false;
+                cmb4_2.Text = "";
+
+                //前フレームの1投目がストライクだった場合
+                if (cmb3_1.Text == "X")
+                {
+                    //前々フレームの1投目がストライクだった場合、ターキーのボーナス点を追加
+                    if (cmb2_1.Text == "X")
+                    {
+                        _total = int.Parse(lbl1_sum.Text);
+                        _frame = _score[2] + _score[4] + _score[6] + _total;
+                        lbl2_sum.Text = _frame.ToString();
+                    }
+                    //前々フレームの1投目がストライクではなかった場合、3フレーム目の合計値を蓄積(ダブル)
+                    else
+                    {
+                        _frame = _score[6] + _total;
+                    }
+                }
+                //前フレームの2投目がスペアだった場合
+                else if (cmb3_2.Text == "/")
+                {
+                    _frame = _score[6] + _total;
+                    lbl3_sum.Text = _frame.ToString();
+
+                    _frame = _score[6] + _frame;
+                }
+            }
+            //前フレームの1投目がストライクだった場合
+            else if (cmb3_1.Text == "X")
+            {
+                cmb4_2.Enabled = true;
+
+                //前々フレームの1投目がストライクだった場合、ダブルのボーナス点を追加
+                if (cmb2_1.Text == "X")
+                {
+                    _frame = 10 + _score[6] + _total;
+                    lbl2_sum.Text = _frame.ToString();
+                }
+            }
+            //前フレームの2投目がスペアだった場合、ボーナス点を追加
+            else if (cmb3_2.Text == "/")
+            {
+                _frame = _score[6] + _total;
+                lbl3_sum.Text = _frame.ToString();
+            }
+            //1投目がストライクではなかった場合、2投目選択可
+            else
+            {
+                cmb4_2.Enabled = true;
+            }
         }
 
         /// <summary>
@@ -287,10 +345,156 @@ namespace bowling_kai
         /// </summary>
         private void cmb4_2_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //スコア代入処理
+            _score[7] = Point(cmb4_2.Text, 6);
 
+            //前フレームの1投目がストライクだった場合
+            if (cmb3_1.Text == "X")
+            {
+                //前々フレームの1投目がストライクだった場合、ダブルのボーナス点を追加
+                if (cmb2_1.Text == "X")
+                {
+                    _total = _score[5] + _score[6] + _score[7] + _frame;
+                    lbl3_sum.Text = _total.ToString();
+
+                    _total = _score[6] + _score[7] + _total;
+                }
+                //前フレームの1投目がストライクだった場合、ボーナス点を追加
+                else
+                {
+                    _total = _score[6] + _score[7] + _frame;
+                    lbl3_sum.Text = _total.ToString();
+
+                    _total = _score[6] + _score[7] + _total;
+                }
+            }
+            //前フレームの1投目がストライクではなかった場合、そのままスコアを追加
+            else
+            {
+                _frame = int.Parse(lbl3_sum.Text);
+                _total = _score[6] + _score[7] + _frame;
+            }
+
+            //2投目がスペアではなかった場合、合計値を印字
+            if (cmb4_2.Text != "/")
+            {
+                lbl4_sum.Text = _total.ToString();
+            }
+            else
+            {
+                lbl4_sum.Text = "";
+            }
         }
 
+        /// <summary>
+        /// コンボボックス5_1選択時
+        /// </summary>
+        private void cmb5_1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lbl5_sum.Text = "";
 
+            //スコア代入処理(1投目の添え字は適当)
+            _score[8] = Point(cmb5_1.Text, 0);
+
+            //1投目がストライクだった場合、2投目選択不可
+            if (cmb5_1.Text == "X")
+            {
+                cmb5_2.Enabled = false;
+                cmb5_2.Text = "";
+
+                //前フレームの1投目がストライクだった場合
+                if (cmb4_1.Text == "X")
+                {
+                    //前々フレームの1投目がストライクだった場合、ターキーのボーナス点を追加
+                    if (cmb3_1.Text == "X")
+                    {
+                        _total = int.Parse(lbl2_sum.Text);
+                        _frame = _score[4] + _score[6] + _score[8] + _total;
+                        lbl3_sum.Text = _frame.ToString();
+                    }
+                    //前々フレームの1投目がストライクではなかった場合、4フレーム目の合計値を蓄積(ダブル)
+                    else
+                    {
+                        _frame = _score[8] + _total;
+                    }
+                }
+                //前フレームの2投目がスペアだった場合
+                else if (cmb4_2.Text == "/")
+                {
+                    _frame = _score[8] + _total;
+                    lbl4_sum.Text = _frame.ToString();
+                }
+            }
+            //前フレームの1投目がストライクだった場合
+            else if (cmb4_1.Text == "X")
+            {
+                cmb5_2.Enabled = true;
+
+                //前々フレームの1投目がストライクだった場合、ダブルのボーナス点を追加
+                if (cmb3_1.Text == "X")
+                {
+                    _frame = 10 + _score[8] + _total;
+                    lbl3_sum.Text = _frame.ToString();
+                }
+            }
+            //前フレームの2投目がスペアだった場合、ボーナス点を追加
+            else if (cmb4_2.Text == "/")
+            {
+                _frame = _score[8] + _total;
+                lbl4_sum.Text = _frame.ToString();
+            }
+            //1投目がストライクではなかった場合、2投目選択可
+            else
+            {
+                cmb5_2.Enabled = true;
+            }
+        }
+
+        /// <summary>
+        /// コンボボックス5_2選択時
+        /// </summary>
+        private void cmb5_2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //スコア代入処理
+            _score[9] = Point(cmb5_2.Text, 8);
+
+            //前フレームの1投目がストライクだった場合
+            if (cmb4_1.Text == "X")
+            {
+                //前々フレームの1投目がストライクだった場合、ダブルのボーナス点を追加
+                if (cmb3_1.Text == "X")
+                {
+                    _total = _score[7] + _score[8] + _score[9] + _frame;
+                    lbl4_sum.Text = _total.ToString();
+
+                    _total = _score[8] + _score[9] + _total;
+                }
+                //前フレームの1投目がストライクだった場合、ボーナス点を追加
+                else
+                {
+                    _total = _score[8] + _score[9] + _frame;
+                    lbl4_sum.Text = _total.ToString();
+
+                    _total = _score[8] + _score[9] + _total;
+                }
+            }
+            //前フレームの1投目がストライクではなかった場合、そのままスコアを追加
+            else
+            {
+                _frame = int.Parse(lbl4_sum.Text);
+                _total = _score[8] + _score[9] + _frame;
+            }
+
+            //2投目がスペアではなかった場合、合計値を印字
+            if (cmb5_2.Text != "/")
+            {
+                lbl5_sum.Text = _total.ToString();
+            }
+            else
+            {
+                lbl5_sum.Text = "";
+            }
+        }
 
         #endregion
 
@@ -430,8 +634,8 @@ namespace bowling_kai
             }
         }
 
-        #endregion
 
 
+        #endregion        
     }
 }

@@ -495,6 +495,7 @@
             this.cmb5_2.Name = "cmb5_2";
             this.cmb5_2.Size = new System.Drawing.Size(33, 24);
             this.cmb5_2.TabIndex = 10;
+            this.cmb5_2.SelectedIndexChanged += new System.EventHandler(this.cmb5_2_SelectedIndexChanged);
             // 
             // pnl6_1
             // 
@@ -573,6 +574,7 @@
             this.cmb5_1.Name = "cmb5_1";
             this.cmb5_1.Size = new System.Drawing.Size(33, 24);
             this.cmb5_1.TabIndex = 9;
+            this.cmb5_1.SelectedIndexChanged += new System.EventHandler(this.cmb5_1_SelectedIndexChanged);
             // 
             // pnl5_sum
             // 
