@@ -515,6 +515,7 @@
             this.cmb6_1.Name = "cmb6_1";
             this.cmb6_1.Size = new System.Drawing.Size(33, 24);
             this.cmb6_1.TabIndex = 11;
+            this.cmb6_1.SelectedIndexChanged += new System.EventHandler(this.cmb6_1_SelectedIndexChanged);
             // 
             // pnl6_sum
             // 
