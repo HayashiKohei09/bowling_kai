@@ -223,6 +223,7 @@
             this.cmb10_3.Name = "cmb10_3";
             this.cmb10_3.Size = new System.Drawing.Size(33, 24);
             this.cmb10_3.TabIndex = 21;
+            this.cmb10_3.SelectedIndexChanged += new System.EventHandler(this.cmb10_3_SelectedIndexChanged);
             // 
             // pnl10_2
             // 
@@ -243,6 +244,7 @@
             this.cmb10_2.Name = "cmb10_2";
             this.cmb10_2.Size = new System.Drawing.Size(33, 24);
             this.cmb10_2.TabIndex = 20;
+            this.cmb10_2.SelectedIndexChanged += new System.EventHandler(this.cmb10_2_SelectedIndexChanged);
             // 
             // panel1
             // 
@@ -283,6 +285,7 @@
             this.cmb10_1.Name = "cmb10_1";
             this.cmb10_1.Size = new System.Drawing.Size(33, 24);
             this.cmb10_1.TabIndex = 19;
+            this.cmb10_1.SelectedIndexChanged += new System.EventHandler(this.cmb10_1_SelectedIndexChanged);
             // 
             // pnl10_sum
             // 
