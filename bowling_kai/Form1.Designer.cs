@@ -263,6 +263,7 @@
             this.cmb9_2.Name = "cmb9_2";
             this.cmb9_2.Size = new System.Drawing.Size(33, 24);
             this.cmb9_2.TabIndex = 18;
+            this.cmb9_2.SelectedIndexChanged += new System.EventHandler(this.cmb9_2_SelectedIndexChanged);
             // 
             // pnl10_1
             // 
@@ -321,6 +322,7 @@
             this.cmb8_2.Name = "cmb8_2";
             this.cmb8_2.Size = new System.Drawing.Size(33, 24);
             this.cmb8_2.TabIndex = 16;
+            this.cmb8_2.SelectedIndexChanged += new System.EventHandler(this.cmb8_2_SelectedIndexChanged);
             // 
             // panel2
             // 
@@ -340,6 +342,7 @@
             this.cmb9_1.Name = "cmb9_1";
             this.cmb9_1.Size = new System.Drawing.Size(33, 24);
             this.cmb9_1.TabIndex = 17;
+            this.cmb9_1.SelectedIndexChanged += new System.EventHandler(this.cmb9_1_SelectedIndexChanged);
             // 
             // panel3
             // 
@@ -379,6 +382,7 @@
             this.cmb7_2.Name = "cmb7_2";
             this.cmb7_2.Size = new System.Drawing.Size(33, 24);
             this.cmb7_2.TabIndex = 14;
+            this.cmb7_2.SelectedIndexChanged += new System.EventHandler(this.cmb7_2_SelectedIndexChanged);
             // 
             // pnl8_1
             // 
@@ -398,6 +402,7 @@
             this.cmb8_1.Name = "cmb8_1";
             this.cmb8_1.Size = new System.Drawing.Size(33, 24);
             this.cmb8_1.TabIndex = 15;
+            this.cmb8_1.SelectedIndexChanged += new System.EventHandler(this.cmb8_1_SelectedIndexChanged);
             // 
             // pnl8_sum
             // 
@@ -437,6 +442,7 @@
             this.cmb6_2.Name = "cmb6_2";
             this.cmb6_2.Size = new System.Drawing.Size(33, 24);
             this.cmb6_2.TabIndex = 12;
+            this.cmb6_2.SelectedIndexChanged += new System.EventHandler(this.cmb6_2_SelectedIndexChanged);
             // 
             // pnl7_1
             // 
@@ -456,6 +462,7 @@
             this.cmb7_1.Name = "cmb7_1";
             this.cmb7_1.Size = new System.Drawing.Size(33, 24);
             this.cmb7_1.TabIndex = 13;
+            this.cmb7_1.SelectedIndexChanged += new System.EventHandler(this.cmb7_1_SelectedIndexChanged);
             // 
             // pnl7_sum
             // 
