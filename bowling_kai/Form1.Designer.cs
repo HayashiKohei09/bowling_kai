@@ -111,6 +111,13 @@
             this.lbl3f = new System.Windows.Forms.Label();
             this.pnl1 = new System.Windows.Forms.Panel();
             this.lbl1f = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.cmbMonth = new System.Windows.Forms.ComboBox();
+            this.lblMonth = new System.Windows.Forms.Label();
+            this.lblDay = new System.Windows.Forms.Label();
+            this.cmbDay = new System.Windows.Forms.ComboBox();
+            this.cmbYear = new System.Windows.Forms.ComboBox();
+            this.lblYear = new System.Windows.Forms.Label();
             this.pnlBack.SuspendLayout();
             this.pnl10_3.SuspendLayout();
             this.pnl10_2.SuspendLayout();
@@ -201,7 +208,7 @@
             this.pnlBack.Controls.Add(this.pnl1);
             this.pnlBack.Location = new System.Drawing.Point(8, 12);
             this.pnlBack.Name = "pnlBack";
-            this.pnlBack.Size = new System.Drawing.Size(824, 263);
+            this.pnlBack.Size = new System.Drawing.Size(824, 132);
             this.pnlBack.TabIndex = 0;
             // 
             // pnl10_3
@@ -300,11 +307,12 @@
             // 
             this.lbl10_sum.AutoSize = true;
             this.lbl10_sum.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl10_sum.Location = new System.Drawing.Point(29, 14);
+            this.lbl10_sum.Location = new System.Drawing.Point(48, 15);
             this.lbl10_sum.Name = "lbl10_sum";
-            this.lbl10_sum.Size = new System.Drawing.Size(56, 16);
+            this.lbl10_sum.Size = new System.Drawing.Size(32, 16);
             this.lbl10_sum.TabIndex = 2;
-            this.lbl10_sum.Text = "      ";
+            this.lbl10_sum.Text = "   ";
+            this.lbl10_sum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnl8_2
             // 
@@ -360,11 +368,12 @@
             // 
             this.lbl9_sum.AutoSize = true;
             this.lbl9_sum.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl9_sum.Location = new System.Drawing.Point(10, 14);
+            this.lbl9_sum.Location = new System.Drawing.Point(28, 15);
             this.lbl9_sum.Name = "lbl9_sum";
-            this.lbl9_sum.Size = new System.Drawing.Size(56, 16);
+            this.lbl9_sum.Size = new System.Drawing.Size(32, 16);
             this.lbl9_sum.TabIndex = 2;
-            this.lbl9_sum.Text = "      ";
+            this.lbl9_sum.Text = "   ";
+            this.lbl9_sum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnl7_2
             // 
@@ -420,11 +429,12 @@
             // 
             this.lbl8_sum.AutoSize = true;
             this.lbl8_sum.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl8_sum.Location = new System.Drawing.Point(10, 14);
+            this.lbl8_sum.Location = new System.Drawing.Point(28, 15);
             this.lbl8_sum.Name = "lbl8_sum";
-            this.lbl8_sum.Size = new System.Drawing.Size(56, 16);
+            this.lbl8_sum.Size = new System.Drawing.Size(32, 16);
             this.lbl8_sum.TabIndex = 2;
-            this.lbl8_sum.Text = "      ";
+            this.lbl8_sum.Text = "   ";
+            this.lbl8_sum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnl6_2
             // 
@@ -480,11 +490,12 @@
             // 
             this.lbl7_sum.AutoSize = true;
             this.lbl7_sum.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl7_sum.Location = new System.Drawing.Point(10, 14);
+            this.lbl7_sum.Location = new System.Drawing.Point(28, 15);
             this.lbl7_sum.Name = "lbl7_sum";
-            this.lbl7_sum.Size = new System.Drawing.Size(56, 16);
+            this.lbl7_sum.Size = new System.Drawing.Size(32, 16);
             this.lbl7_sum.TabIndex = 2;
-            this.lbl7_sum.Text = "      ";
+            this.lbl7_sum.Text = "   ";
+            this.lbl7_sum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnl5_2
             // 
@@ -540,11 +551,12 @@
             // 
             this.lbl6_sum.AutoSize = true;
             this.lbl6_sum.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl6_sum.Location = new System.Drawing.Point(10, 14);
+            this.lbl6_sum.Location = new System.Drawing.Point(28, 15);
             this.lbl6_sum.Name = "lbl6_sum";
-            this.lbl6_sum.Size = new System.Drawing.Size(56, 16);
+            this.lbl6_sum.Size = new System.Drawing.Size(32, 16);
             this.lbl6_sum.TabIndex = 2;
-            this.lbl6_sum.Text = "      ";
+            this.lbl6_sum.Text = "   ";
+            this.lbl6_sum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnl4_2
             // 
@@ -600,11 +612,12 @@
             // 
             this.lbl5_sum.AutoSize = true;
             this.lbl5_sum.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl5_sum.Location = new System.Drawing.Point(10, 14);
+            this.lbl5_sum.Location = new System.Drawing.Point(28, 15);
             this.lbl5_sum.Name = "lbl5_sum";
-            this.lbl5_sum.Size = new System.Drawing.Size(56, 16);
+            this.lbl5_sum.Size = new System.Drawing.Size(32, 16);
             this.lbl5_sum.TabIndex = 2;
-            this.lbl5_sum.Text = "      ";
+            this.lbl5_sum.Text = "   ";
+            this.lbl5_sum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnl3_2
             // 
@@ -660,11 +673,12 @@
             // 
             this.lbl4_sum.AutoSize = true;
             this.lbl4_sum.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl4_sum.Location = new System.Drawing.Point(10, 14);
+            this.lbl4_sum.Location = new System.Drawing.Point(28, 15);
             this.lbl4_sum.Name = "lbl4_sum";
-            this.lbl4_sum.Size = new System.Drawing.Size(56, 16);
+            this.lbl4_sum.Size = new System.Drawing.Size(32, 16);
             this.lbl4_sum.TabIndex = 2;
-            this.lbl4_sum.Text = "      ";
+            this.lbl4_sum.Text = "   ";
+            this.lbl4_sum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnl2_2
             // 
@@ -720,11 +734,12 @@
             // 
             this.lbl3_sum.AutoSize = true;
             this.lbl3_sum.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl3_sum.Location = new System.Drawing.Point(10, 14);
+            this.lbl3_sum.Location = new System.Drawing.Point(28, 15);
             this.lbl3_sum.Name = "lbl3_sum";
-            this.lbl3_sum.Size = new System.Drawing.Size(56, 16);
+            this.lbl3_sum.Size = new System.Drawing.Size(32, 16);
             this.lbl3_sum.TabIndex = 2;
-            this.lbl3_sum.Text = "      ";
+            this.lbl3_sum.Text = "   ";
+            this.lbl3_sum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnl1_2
             // 
@@ -780,11 +795,12 @@
             // 
             this.lbl2_sum.AutoSize = true;
             this.lbl2_sum.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl2_sum.Location = new System.Drawing.Point(10, 14);
+            this.lbl2_sum.Location = new System.Drawing.Point(28, 15);
             this.lbl2_sum.Name = "lbl2_sum";
-            this.lbl2_sum.Size = new System.Drawing.Size(56, 16);
+            this.lbl2_sum.Size = new System.Drawing.Size(32, 16);
             this.lbl2_sum.TabIndex = 1;
-            this.lbl2_sum.Text = "      ";
+            this.lbl2_sum.Text = "   ";
+            this.lbl2_sum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnl1_1
             // 
@@ -819,11 +835,12 @@
             // 
             this.lbl1_sum.AutoSize = true;
             this.lbl1_sum.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl1_sum.Location = new System.Drawing.Point(9, 14);
+            this.lbl1_sum.Location = new System.Drawing.Point(28, 15);
             this.lbl1_sum.Name = "lbl1_sum";
-            this.lbl1_sum.Size = new System.Drawing.Size(56, 16);
+            this.lbl1_sum.Size = new System.Drawing.Size(32, 16);
             this.lbl1_sum.TabIndex = 0;
-            this.lbl1_sum.Text = "      ";
+            this.lbl1_sum.Text = "   ";
+            this.lbl1_sum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnl10f
             // 
@@ -1015,11 +1032,83 @@
             this.lbl1f.TabIndex = 0;
             this.lbl1f.Text = "1";
             // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblDate.Location = new System.Drawing.Point(102, 164);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(120, 21);
+            this.lblDate.TabIndex = 1;
+            this.lblDate.Text = "【登録日】";
+            // 
+            // cmbMonth
+            // 
+            this.cmbMonth.FormattingEnabled = true;
+            this.cmbMonth.Location = new System.Drawing.Point(130, 198);
+            this.cmbMonth.Name = "cmbMonth";
+            this.cmbMonth.Size = new System.Drawing.Size(52, 20);
+            this.cmbMonth.TabIndex = 23;
+            this.cmbMonth.SelectedIndexChanged += new System.EventHandler(this.cmbMonth_SelectedIndexChanged);
+            // 
+            // lblMonth
+            // 
+            this.lblMonth.AutoSize = true;
+            this.lblMonth.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblMonth.Location = new System.Drawing.Point(191, 201);
+            this.lblMonth.Name = "lblMonth";
+            this.lblMonth.Size = new System.Drawing.Size(23, 15);
+            this.lblMonth.TabIndex = 3;
+            this.lblMonth.Text = "月";
+            // 
+            // lblDay
+            // 
+            this.lblDay.AutoSize = true;
+            this.lblDay.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblDay.Location = new System.Drawing.Point(281, 201);
+            this.lblDay.Name = "lblDay";
+            this.lblDay.Size = new System.Drawing.Size(23, 15);
+            this.lblDay.TabIndex = 5;
+            this.lblDay.Text = "日";
+            // 
+            // cmbDay
+            // 
+            this.cmbDay.FormattingEnabled = true;
+            this.cmbDay.Location = new System.Drawing.Point(220, 198);
+            this.cmbDay.Name = "cmbDay";
+            this.cmbDay.Size = new System.Drawing.Size(52, 20);
+            this.cmbDay.TabIndex = 24;
+            // 
+            // cmbYear
+            // 
+            this.cmbYear.FormattingEnabled = true;
+            this.cmbYear.Location = new System.Drawing.Point(23, 198);
+            this.cmbYear.Name = "cmbYear";
+            this.cmbYear.Size = new System.Drawing.Size(68, 20);
+            this.cmbYear.TabIndex = 22;
+            // 
+            // lblYear
+            // 
+            this.lblYear.AutoSize = true;
+            this.lblYear.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblYear.Location = new System.Drawing.Point(101, 201);
+            this.lblYear.Name = "lblYear";
+            this.lblYear.Size = new System.Drawing.Size(23, 15);
+            this.lblYear.TabIndex = 7;
+            this.lblYear.Text = "年";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(843, 361);
+            this.Controls.Add(this.lblYear);
+            this.Controls.Add(this.cmbYear);
+            this.Controls.Add(this.lblDay);
+            this.Controls.Add(this.cmbDay);
+            this.Controls.Add(this.lblMonth);
+            this.Controls.Add(this.cmbMonth);
+            this.Controls.Add(this.lblDate);
             this.Controls.Add(this.pnlBack);
             this.Name = "Form1";
             this.Text = "ボウリングスコア";
@@ -1087,6 +1176,7 @@
             this.pnl1.ResumeLayout(false);
             this.pnl1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1175,6 +1265,13 @@
         private System.Windows.Forms.Label lbl5_sum;
         private System.Windows.Forms.Label lbl4_sum;
         private System.Windows.Forms.Label lbl3_sum;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.ComboBox cmbMonth;
+        private System.Windows.Forms.Label lblMonth;
+        private System.Windows.Forms.Label lblDay;
+        private System.Windows.Forms.ComboBox cmbDay;
+        private System.Windows.Forms.ComboBox cmbYear;
+        private System.Windows.Forms.Label lblYear;
     }
 }
 
