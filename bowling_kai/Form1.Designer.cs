@@ -213,6 +213,7 @@
             // 
             // pnl10_3
             // 
+            this.pnl10_3.BackColor = System.Drawing.Color.White;
             this.pnl10_3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl10_3.Controls.Add(this.cmb10_3);
             this.pnl10_3.Location = new System.Drawing.Point(780, 40);
@@ -222,6 +223,7 @@
             // 
             // cmb10_3
             // 
+            this.cmb10_3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb10_3.Enabled = false;
             this.cmb10_3.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.cmb10_3.FormattingEnabled = true;
@@ -234,6 +236,7 @@
             // 
             // pnl10_2
             // 
+            this.pnl10_2.BackColor = System.Drawing.Color.White;
             this.pnl10_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl10_2.Controls.Add(this.cmb10_2);
             this.pnl10_2.Location = new System.Drawing.Point(741, 40);
@@ -243,6 +246,7 @@
             // 
             // cmb10_2
             // 
+            this.cmb10_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb10_2.Enabled = false;
             this.cmb10_2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.cmb10_2.FormattingEnabled = true;
@@ -255,6 +259,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.cmb9_2);
             this.panel1.Location = new System.Drawing.Point(663, 40);
@@ -264,6 +269,7 @@
             // 
             // cmb9_2
             // 
+            this.cmb9_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb9_2.Enabled = false;
             this.cmb9_2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.cmb9_2.FormattingEnabled = true;
@@ -276,6 +282,7 @@
             // 
             // pnl10_1
             // 
+            this.pnl10_1.BackColor = System.Drawing.Color.White;
             this.pnl10_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl10_1.Controls.Add(this.cmb10_1);
             this.pnl10_1.Location = new System.Drawing.Point(702, 40);
@@ -285,6 +292,7 @@
             // 
             // cmb10_1
             // 
+            this.cmb10_1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb10_1.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.cmb10_1.FormattingEnabled = true;
             this.cmb10_1.ItemHeight = 16;
@@ -296,6 +304,7 @@
             // 
             // pnl10_sum
             // 
+            this.pnl10_sum.BackColor = System.Drawing.Color.White;
             this.pnl10_sum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl10_sum.Controls.Add(this.lbl10_sum);
             this.pnl10_sum.Location = new System.Drawing.Point(702, 82);
@@ -316,6 +325,7 @@
             // 
             // pnl8_2
             // 
+            this.pnl8_2.BackColor = System.Drawing.Color.White;
             this.pnl8_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl8_2.Controls.Add(this.cmb8_2);
             this.pnl8_2.Location = new System.Drawing.Point(585, 40);
@@ -325,6 +335,7 @@
             // 
             // cmb8_2
             // 
+            this.cmb8_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb8_2.Enabled = false;
             this.cmb8_2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.cmb8_2.FormattingEnabled = true;
@@ -337,6 +348,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.cmb9_1);
             this.panel2.Location = new System.Drawing.Point(624, 40);
@@ -346,6 +358,7 @@
             // 
             // cmb9_1
             // 
+            this.cmb9_1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb9_1.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.cmb9_1.FormattingEnabled = true;
             this.cmb9_1.ItemHeight = 16;
@@ -357,6 +370,7 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.lbl9_sum);
             this.panel3.Location = new System.Drawing.Point(624, 82);
@@ -377,6 +391,7 @@
             // 
             // pnl7_2
             // 
+            this.pnl7_2.BackColor = System.Drawing.Color.White;
             this.pnl7_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl7_2.Controls.Add(this.cmb7_2);
             this.pnl7_2.Location = new System.Drawing.Point(507, 40);
@@ -386,6 +401,7 @@
             // 
             // cmb7_2
             // 
+            this.cmb7_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb7_2.Enabled = false;
             this.cmb7_2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.cmb7_2.FormattingEnabled = true;
@@ -398,6 +414,7 @@
             // 
             // pnl8_1
             // 
+            this.pnl8_1.BackColor = System.Drawing.Color.White;
             this.pnl8_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl8_1.Controls.Add(this.cmb8_1);
             this.pnl8_1.Location = new System.Drawing.Point(546, 40);
@@ -407,6 +424,7 @@
             // 
             // cmb8_1
             // 
+            this.cmb8_1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb8_1.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.cmb8_1.FormattingEnabled = true;
             this.cmb8_1.ItemHeight = 16;
@@ -418,6 +436,7 @@
             // 
             // pnl8_sum
             // 
+            this.pnl8_sum.BackColor = System.Drawing.Color.White;
             this.pnl8_sum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl8_sum.Controls.Add(this.lbl8_sum);
             this.pnl8_sum.Location = new System.Drawing.Point(546, 82);
@@ -438,6 +457,7 @@
             // 
             // pnl6_2
             // 
+            this.pnl6_2.BackColor = System.Drawing.Color.White;
             this.pnl6_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl6_2.Controls.Add(this.cmb6_2);
             this.pnl6_2.Location = new System.Drawing.Point(429, 40);
@@ -447,6 +467,7 @@
             // 
             // cmb6_2
             // 
+            this.cmb6_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb6_2.Enabled = false;
             this.cmb6_2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.cmb6_2.FormattingEnabled = true;
@@ -459,6 +480,7 @@
             // 
             // pnl7_1
             // 
+            this.pnl7_1.BackColor = System.Drawing.Color.White;
             this.pnl7_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl7_1.Controls.Add(this.cmb7_1);
             this.pnl7_1.Location = new System.Drawing.Point(468, 40);
@@ -468,6 +490,7 @@
             // 
             // cmb7_1
             // 
+            this.cmb7_1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb7_1.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.cmb7_1.FormattingEnabled = true;
             this.cmb7_1.ItemHeight = 16;
@@ -479,6 +502,7 @@
             // 
             // pnl7_sum
             // 
+            this.pnl7_sum.BackColor = System.Drawing.Color.White;
             this.pnl7_sum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl7_sum.Controls.Add(this.lbl7_sum);
             this.pnl7_sum.Location = new System.Drawing.Point(468, 82);
@@ -499,6 +523,7 @@
             // 
             // pnl5_2
             // 
+            this.pnl5_2.BackColor = System.Drawing.Color.White;
             this.pnl5_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl5_2.Controls.Add(this.cmb5_2);
             this.pnl5_2.Location = new System.Drawing.Point(351, 40);
@@ -508,6 +533,7 @@
             // 
             // cmb5_2
             // 
+            this.cmb5_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb5_2.Enabled = false;
             this.cmb5_2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.cmb5_2.FormattingEnabled = true;
@@ -520,6 +546,7 @@
             // 
             // pnl6_1
             // 
+            this.pnl6_1.BackColor = System.Drawing.Color.White;
             this.pnl6_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl6_1.Controls.Add(this.cmb6_1);
             this.pnl6_1.Location = new System.Drawing.Point(390, 40);
@@ -529,6 +556,7 @@
             // 
             // cmb6_1
             // 
+            this.cmb6_1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb6_1.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.cmb6_1.FormattingEnabled = true;
             this.cmb6_1.ItemHeight = 16;
@@ -540,6 +568,7 @@
             // 
             // pnl6_sum
             // 
+            this.pnl6_sum.BackColor = System.Drawing.Color.White;
             this.pnl6_sum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl6_sum.Controls.Add(this.lbl6_sum);
             this.pnl6_sum.Location = new System.Drawing.Point(390, 82);
@@ -560,6 +589,7 @@
             // 
             // pnl4_2
             // 
+            this.pnl4_2.BackColor = System.Drawing.Color.White;
             this.pnl4_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl4_2.Controls.Add(this.cmb4_2);
             this.pnl4_2.Location = new System.Drawing.Point(273, 40);
@@ -569,6 +599,7 @@
             // 
             // cmb4_2
             // 
+            this.cmb4_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb4_2.Enabled = false;
             this.cmb4_2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.cmb4_2.FormattingEnabled = true;
@@ -581,6 +612,7 @@
             // 
             // pnl5_1
             // 
+            this.pnl5_1.BackColor = System.Drawing.Color.White;
             this.pnl5_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl5_1.Controls.Add(this.cmb5_1);
             this.pnl5_1.Location = new System.Drawing.Point(312, 40);
@@ -590,6 +622,7 @@
             // 
             // cmb5_1
             // 
+            this.cmb5_1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb5_1.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.cmb5_1.FormattingEnabled = true;
             this.cmb5_1.ItemHeight = 16;
@@ -601,6 +634,7 @@
             // 
             // pnl5_sum
             // 
+            this.pnl5_sum.BackColor = System.Drawing.Color.White;
             this.pnl5_sum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl5_sum.Controls.Add(this.lbl5_sum);
             this.pnl5_sum.Location = new System.Drawing.Point(312, 82);
@@ -621,6 +655,7 @@
             // 
             // pnl3_2
             // 
+            this.pnl3_2.BackColor = System.Drawing.Color.White;
             this.pnl3_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl3_2.Controls.Add(this.cmb3_2);
             this.pnl3_2.Location = new System.Drawing.Point(195, 40);
@@ -630,6 +665,7 @@
             // 
             // cmb3_2
             // 
+            this.cmb3_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb3_2.Enabled = false;
             this.cmb3_2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.cmb3_2.FormattingEnabled = true;
@@ -642,6 +678,7 @@
             // 
             // pnl4_1
             // 
+            this.pnl4_1.BackColor = System.Drawing.Color.White;
             this.pnl4_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl4_1.Controls.Add(this.cmb4_1);
             this.pnl4_1.Location = new System.Drawing.Point(234, 40);
@@ -651,6 +688,7 @@
             // 
             // cmb4_1
             // 
+            this.cmb4_1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb4_1.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.cmb4_1.FormattingEnabled = true;
             this.cmb4_1.ItemHeight = 16;
@@ -662,6 +700,7 @@
             // 
             // pnl4_sum
             // 
+            this.pnl4_sum.BackColor = System.Drawing.Color.White;
             this.pnl4_sum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl4_sum.Controls.Add(this.lbl4_sum);
             this.pnl4_sum.Location = new System.Drawing.Point(234, 82);
@@ -682,6 +721,7 @@
             // 
             // pnl2_2
             // 
+            this.pnl2_2.BackColor = System.Drawing.Color.White;
             this.pnl2_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl2_2.Controls.Add(this.cmb2_2);
             this.pnl2_2.Location = new System.Drawing.Point(117, 40);
@@ -691,6 +731,7 @@
             // 
             // cmb2_2
             // 
+            this.cmb2_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb2_2.Enabled = false;
             this.cmb2_2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.cmb2_2.FormattingEnabled = true;
@@ -703,6 +744,7 @@
             // 
             // pnl3_1
             // 
+            this.pnl3_1.BackColor = System.Drawing.Color.White;
             this.pnl3_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl3_1.Controls.Add(this.cmb3_1);
             this.pnl3_1.Location = new System.Drawing.Point(156, 40);
@@ -712,6 +754,7 @@
             // 
             // cmb3_1
             // 
+            this.cmb3_1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb3_1.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.cmb3_1.FormattingEnabled = true;
             this.cmb3_1.ItemHeight = 16;
@@ -723,6 +766,7 @@
             // 
             // pnl3_sum
             // 
+            this.pnl3_sum.BackColor = System.Drawing.Color.White;
             this.pnl3_sum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl3_sum.Controls.Add(this.lbl3_sum);
             this.pnl3_sum.Location = new System.Drawing.Point(156, 82);
@@ -743,6 +787,7 @@
             // 
             // pnl1_2
             // 
+            this.pnl1_2.BackColor = System.Drawing.Color.White;
             this.pnl1_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl1_2.Controls.Add(this.cmb1_2);
             this.pnl1_2.Location = new System.Drawing.Point(39, 40);
@@ -752,6 +797,7 @@
             // 
             // cmb1_2
             // 
+            this.cmb1_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb1_2.Enabled = false;
             this.cmb1_2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.cmb1_2.FormattingEnabled = true;
@@ -764,6 +810,7 @@
             // 
             // pnl2_1
             // 
+            this.pnl2_1.BackColor = System.Drawing.Color.White;
             this.pnl2_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl2_1.Controls.Add(this.cmb2_1);
             this.pnl2_1.Location = new System.Drawing.Point(78, 40);
@@ -773,6 +820,7 @@
             // 
             // cmb2_1
             // 
+            this.cmb2_1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb2_1.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.cmb2_1.FormattingEnabled = true;
             this.cmb2_1.ItemHeight = 16;
@@ -784,6 +832,7 @@
             // 
             // pnl2_sum
             // 
+            this.pnl2_sum.BackColor = System.Drawing.Color.White;
             this.pnl2_sum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl2_sum.Controls.Add(this.lbl2_sum);
             this.pnl2_sum.Location = new System.Drawing.Point(78, 82);
@@ -804,6 +853,7 @@
             // 
             // pnl1_1
             // 
+            this.pnl1_1.BackColor = System.Drawing.Color.White;
             this.pnl1_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl1_1.Controls.Add(this.cmb1_1);
             this.pnl1_1.Location = new System.Drawing.Point(0, 40);
@@ -813,6 +863,7 @@
             // 
             // cmb1_1
             // 
+            this.cmb1_1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb1_1.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.cmb1_1.FormattingEnabled = true;
             this.cmb1_1.ItemHeight = 16;
@@ -824,6 +875,7 @@
             // 
             // pnl1_sum
             // 
+            this.pnl1_sum.BackColor = System.Drawing.Color.White;
             this.pnl1_sum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl1_sum.Controls.Add(this.lbl1_sum);
             this.pnl1_sum.Location = new System.Drawing.Point(0, 82);
@@ -844,8 +896,10 @@
             // 
             // pnl10f
             // 
+            this.pnl10f.BackColor = System.Drawing.Color.Cyan;
             this.pnl10f.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnl10f.Controls.Add(this.lbl10f);
+            this.pnl10f.ForeColor = System.Drawing.SystemColors.ControlText;
             this.pnl10f.Location = new System.Drawing.Point(701, -1);
             this.pnl10f.Name = "pnl10f";
             this.pnl10f.Size = new System.Drawing.Size(119, 42);
@@ -863,8 +917,10 @@
             // 
             // pnl9
             // 
+            this.pnl9.BackColor = System.Drawing.Color.Cyan;
             this.pnl9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnl9.Controls.Add(this.lbl9f);
+            this.pnl9.ForeColor = System.Drawing.SystemColors.ControlText;
             this.pnl9.Location = new System.Drawing.Point(623, -1);
             this.pnl9.Name = "pnl9";
             this.pnl9.Size = new System.Drawing.Size(78, 42);
@@ -882,8 +938,10 @@
             // 
             // pnl8
             // 
+            this.pnl8.BackColor = System.Drawing.Color.Cyan;
             this.pnl8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnl8.Controls.Add(this.lbl8f);
+            this.pnl8.ForeColor = System.Drawing.SystemColors.ControlText;
             this.pnl8.Location = new System.Drawing.Point(545, -1);
             this.pnl8.Name = "pnl8";
             this.pnl8.Size = new System.Drawing.Size(78, 42);
@@ -901,8 +959,10 @@
             // 
             // pnl7
             // 
+            this.pnl7.BackColor = System.Drawing.Color.Cyan;
             this.pnl7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnl7.Controls.Add(this.lbl7f);
+            this.pnl7.ForeColor = System.Drawing.SystemColors.ControlText;
             this.pnl7.Location = new System.Drawing.Point(467, -1);
             this.pnl7.Name = "pnl7";
             this.pnl7.Size = new System.Drawing.Size(78, 42);
@@ -920,8 +980,10 @@
             // 
             // pnl6
             // 
+            this.pnl6.BackColor = System.Drawing.Color.Cyan;
             this.pnl6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnl6.Controls.Add(this.lbl6f);
+            this.pnl6.ForeColor = System.Drawing.SystemColors.ControlText;
             this.pnl6.Location = new System.Drawing.Point(389, -1);
             this.pnl6.Name = "pnl6";
             this.pnl6.Size = new System.Drawing.Size(78, 42);
@@ -939,8 +1001,10 @@
             // 
             // pnl4
             // 
+            this.pnl4.BackColor = System.Drawing.Color.Cyan;
             this.pnl4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnl4.Controls.Add(this.lbl4f);
+            this.pnl4.ForeColor = System.Drawing.SystemColors.ControlText;
             this.pnl4.Location = new System.Drawing.Point(233, -1);
             this.pnl4.Name = "pnl4";
             this.pnl4.Size = new System.Drawing.Size(78, 42);
@@ -958,8 +1022,10 @@
             // 
             // pnl5
             // 
+            this.pnl5.BackColor = System.Drawing.Color.Cyan;
             this.pnl5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnl5.Controls.Add(this.lbl5f);
+            this.pnl5.ForeColor = System.Drawing.SystemColors.ControlText;
             this.pnl5.Location = new System.Drawing.Point(311, -1);
             this.pnl5.Name = "pnl5";
             this.pnl5.Size = new System.Drawing.Size(78, 42);
@@ -977,8 +1043,10 @@
             // 
             // pnl2
             // 
+            this.pnl2.BackColor = System.Drawing.Color.Cyan;
             this.pnl2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnl2.Controls.Add(this.lbl2f);
+            this.pnl2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.pnl2.Location = new System.Drawing.Point(77, -1);
             this.pnl2.Name = "pnl2";
             this.pnl2.Size = new System.Drawing.Size(78, 42);
@@ -996,8 +1064,10 @@
             // 
             // pnl3
             // 
+            this.pnl3.BackColor = System.Drawing.Color.Cyan;
             this.pnl3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnl3.Controls.Add(this.lbl3f);
+            this.pnl3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.pnl3.Location = new System.Drawing.Point(155, -1);
             this.pnl3.Name = "pnl3";
             this.pnl3.Size = new System.Drawing.Size(78, 42);
@@ -1015,8 +1085,10 @@
             // 
             // pnl1
             // 
+            this.pnl1.BackColor = System.Drawing.Color.Cyan;
             this.pnl1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnl1.Controls.Add(this.lbl1f);
+            this.pnl1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.pnl1.Location = new System.Drawing.Point(-1, -1);
             this.pnl1.Name = "pnl1";
             this.pnl1.Size = new System.Drawing.Size(78, 42);
@@ -1044,6 +1116,7 @@
             // 
             // cmbMonth
             // 
+            this.cmbMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMonth.FormattingEnabled = true;
             this.cmbMonth.Location = new System.Drawing.Point(130, 198);
             this.cmbMonth.Name = "cmbMonth";
@@ -1073,6 +1146,7 @@
             // 
             // cmbDay
             // 
+            this.cmbDay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDay.FormattingEnabled = true;
             this.cmbDay.Location = new System.Drawing.Point(220, 198);
             this.cmbDay.Name = "cmbDay";
@@ -1081,6 +1155,7 @@
             // 
             // cmbYear
             // 
+            this.cmbYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbYear.FormattingEnabled = true;
             this.cmbYear.Location = new System.Drawing.Point(23, 198);
             this.cmbYear.Name = "cmbYear";
