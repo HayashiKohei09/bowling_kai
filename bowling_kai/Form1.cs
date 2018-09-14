@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace bowling_kai
@@ -1124,6 +1126,196 @@ namespace bowling_kai
             //コンボボックス追加処理(日)
             Addday();
         }
+
+        /// <summary>
+        /// 「登録」ボタン押下時
+        /// </summary>
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            //どれか1フレームに空白があった場合
+            if (lbl1_sum.Text == "" ||
+                lbl2_sum.Text == "" ||
+                lbl3_sum.Text == "" ||
+                lbl4_sum.Text == "" ||
+                lbl5_sum.Text == "" ||
+                lbl6_sum.Text == "" ||
+                lbl7_sum.Text == "" ||
+                lbl8_sum.Text == "" ||
+                lbl9_sum.Text == "" ||
+                lbl10_sum.Text == "")
+            {
+                MessageBox.Show("スコアが正しく入力されていません。\n" +
+                                "再度確かめてから登録ボタンを押してください。",
+                                "スコア入力エラー",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+            }
+            //登録日が入力されていなかった場合
+            else if(cmbYear.Text == ""  ||
+                    cmbMonth.Text == "" ||
+                    cmbDay.Text == "")
+            {
+                MessageBox.Show("登録日が正しく入力されていません。\n" +
+                                "再度確かめてから登録ボタンを押してください。",
+                                "登録日入力エラー",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+            }
+            //全て正しく入力されていた場合
+            else
+            {
+                DialogResult result = MessageBox.Show("スコアを登録します。\nよろしいですか？",
+                                                      "スコア登録",
+                                                      MessageBoxButtons.OKCancel,
+                                                      MessageBoxIcon.Exclamation);
+
+                if (result == DialogResult.OK)
+                {
+                    // 接続文字列の取得(App.config内のname名)
+                    var connectionString = ConfigurationManager.ConnectionStrings["sqlsvr"].ConnectionString;
+
+                    using (var connection = new SqlConnection(connectionString))
+                    {
+                        try
+                        {
+                            var table = new DataTable();
+
+                            // データベースの接続開始
+                            connection.Open();
+
+                            using (var transaction = connection.BeginTransaction())
+                            using (var command = new SqlCommand() { Connection = connection, Transaction = transaction })
+                            {
+                                try
+                                {
+                                    // レコードの数を参照
+                                    command.CommandText = @"SELECT count(*) FROM bowling_kai.dbo.ボウリング";
+
+                                    // SQLの実行
+                                    var adapter = new SqlDataAdapter(command);
+                                    adapter.Fill(table);
+
+                                    // 実行するSQLの準備
+                                    command.CommandText = @"INSERT INTO bowling_kai.dbo.ボウリング
+                                                            (登録No,
+                                                             年,
+                                                             月,
+                                                             日,
+                                                             Frame1_1,
+                                                             Frame1_2,
+                                                             Frame2_1,
+                                                             Frame2_2,
+                                                             Frame3_1,
+                                                             Frame3_2,
+                                                             Frame4_1,
+                                                             Frame4_2,
+                                                             Frame5_1,
+                                                             Frame5_2,
+                                                             Frame6_1,
+                                                             Frame6_2,
+                                                             Frame7_1,
+                                                             Frame7_2,
+                                                             Frame8_1,
+                                                             Frame8_2,
+                                                             Frame9_1,
+                                                             Frame9_2,
+                                                             Frame10_1,
+                                                             Frame10_2,
+                                                             Frame10_3,
+                                                             Total)
+                                                             VALUES
+                                                            (@No,
+                                                             @DataYear,
+                                                             @DataMonth,
+                                                             @DataDay,
+                                                             @1_1,
+                                                             @1_2,
+                                                             @2_1,
+                                                             @2_2,
+                                                             @3_1,
+                                                             @3_2,
+                                                             @4_1,
+                                                             @4_2,
+                                                             @5_1,
+                                                             @5_2,
+                                                             @6_1,
+                                                             @6_2,
+                                                             @7_1,
+                                                             @7_2,
+                                                             @8_1,
+                                                             @8_2,
+                                                             @9_1,
+                                                             @9_2,
+                                                             @10_1,
+                                                             @10_2,
+                                                             @10_3,
+                                                             @total)";
+
+                                    command.Parameters.Add(new SqlParameter("@No", table.Columns.Count + 1));
+                                    command.Parameters.Add(new SqlParameter("@DataYear", cmbYear.Text));
+                                    command.Parameters.Add(new SqlParameter("@DataMonth", cmbMonth.Text));
+                                    command.Parameters.Add(new SqlParameter("@DataDay", cmbDay.Text));
+                                    command.Parameters.Add(new SqlParameter("@1_1", cmb1_1.Text));
+                                    command.Parameters.Add(new SqlParameter("@1_2", cmb1_2.Text));
+                                    command.Parameters.Add(new SqlParameter("@2_1", cmb2_1.Text));
+                                    command.Parameters.Add(new SqlParameter("@2_2", cmb2_2.Text));
+                                    command.Parameters.Add(new SqlParameter("@3_1", cmb3_1.Text));
+                                    command.Parameters.Add(new SqlParameter("@3_2", cmb3_2.Text));
+                                    command.Parameters.Add(new SqlParameter("@4_1", cmb4_1.Text));
+                                    command.Parameters.Add(new SqlParameter("@4_2", cmb4_2.Text));
+                                    command.Parameters.Add(new SqlParameter("@5_1", cmb5_1.Text));
+                                    command.Parameters.Add(new SqlParameter("@5_2", cmb5_2.Text));
+                                    command.Parameters.Add(new SqlParameter("@6_1", cmb6_1.Text));
+                                    command.Parameters.Add(new SqlParameter("@6_2", cmb6_2.Text));
+                                    command.Parameters.Add(new SqlParameter("@7_1", cmb7_1.Text));
+                                    command.Parameters.Add(new SqlParameter("@7_2", cmb7_2.Text));
+                                    command.Parameters.Add(new SqlParameter("@8_1", cmb8_1.Text));
+                                    command.Parameters.Add(new SqlParameter("@8_2", cmb8_2.Text));
+                                    command.Parameters.Add(new SqlParameter("@9_1", cmb9_1.Text));
+                                    command.Parameters.Add(new SqlParameter("@9_2", cmb9_2.Text));
+                                    command.Parameters.Add(new SqlParameter("@10_1", cmb10_1.Text));
+                                    command.Parameters.Add(new SqlParameter("@10_2", cmb10_2.Text));
+                                    command.Parameters.Add(new SqlParameter("@10_3", cmb10_3.Text));
+                                    command.Parameters.Add(new SqlParameter("@total", lbl10_sum.Text));
+
+                                    // SQLの実行
+                                    command.ExecuteNonQuery();
+
+                                    MessageBox.Show("登録が完了しました。",
+                                                    "登録完了！！",
+                                                    MessageBoxButtons.OK,
+                                                    MessageBoxIcon.Information);
+                                }
+                                catch (Exception exception)
+                                {
+                                    Console.WriteLine(exception.Message);
+
+                                    // ロールバック
+                                    transaction.Rollback();
+                                    throw;
+                                }
+                                finally
+                                {
+                                    // コミット
+                                    transaction.Commit();
+                                }
+                            }
+                        }
+                        catch
+                        {
+                            throw;
+                        }
+                        finally
+                        {
+                            // データベースの接続終了
+                            connection.Close();
+                        }
+                    }
+                }
+            }
+        }
+
+
         #endregion
 
 
@@ -1361,8 +1553,7 @@ namespace bowling_kai
 
 
 
-        #endregion
 
-        
+        #endregion
     }
 }
