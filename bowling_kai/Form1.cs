@@ -46,6 +46,9 @@ namespace bowling_kai
         {
             //コンボボックス初期化処理
             Print();
+
+            //タイマー起動
+            timTime.Start();
         }
 
         /// <summary>
@@ -1061,7 +1064,7 @@ namespace bowling_kai
                 //前フレームの1投目がストライクではなかった場合、そのままスコアを追加
                 else
                 {
-                    _frame = int.Parse(lbl9_sum.Text);
+                    int.TryParse(lbl9_sum.Text, out _frame);
                     _total = _score[18] + _score[19] + _frame;
                 }
 
@@ -1171,7 +1174,7 @@ namespace bowling_kai
 
                 if (result == DialogResult.OK)
                 {
-                    // 接続文字列の取得(App.config内のname名)
+                    //接続文字列の取得(App.config内のname名)
                     var connectionString = ConfigurationManager.ConnectionStrings["sqlsvr"].ConnectionString;
 
                     using (var connection = new SqlConnection(connectionString))
@@ -1180,7 +1183,7 @@ namespace bowling_kai
                         {
                             var table = new DataTable();
 
-                            // データベースの接続開始
+                            //データベースの接続開始
                             connection.Open();
 
                             using (var transaction = connection.BeginTransaction())
@@ -1188,14 +1191,14 @@ namespace bowling_kai
                             {
                                 try
                                 {
-                                    // レコードの数を参照
-                                    command.CommandText = @"SELECT count(*) FROM bowling_kai.dbo.ボウリング";
+                                    //レコードの数を参照
+                                    command.CommandText = @"SELECT 登録No FROM bowling_kai.dbo.ボウリング";
 
-                                    // SQLの実行
+                                    //SQLの実行
                                     var adapter = new SqlDataAdapter(command);
                                     adapter.Fill(table);
 
-                                    // 実行するSQLの準備
+                                    //実行するSQLの準備
                                     command.CommandText = @"INSERT INTO bowling_kai.dbo.ボウリング
                                                             (登録No,
                                                              年,
@@ -1251,7 +1254,7 @@ namespace bowling_kai
                                                              @10_3,
                                                              @total)";
 
-                                    command.Parameters.Add(new SqlParameter("@No", table.Columns.Count + 1));
+                                    command.Parameters.Add(new SqlParameter("@No", table.Rows.Count + 1));
                                     command.Parameters.Add(new SqlParameter("@DataYear", cmbYear.Text));
                                     command.Parameters.Add(new SqlParameter("@DataMonth", cmbMonth.Text));
                                     command.Parameters.Add(new SqlParameter("@DataDay", cmbDay.Text));
@@ -1278,13 +1281,16 @@ namespace bowling_kai
                                     command.Parameters.Add(new SqlParameter("@10_3", cmb10_3.Text));
                                     command.Parameters.Add(new SqlParameter("@total", lbl10_sum.Text));
 
-                                    // SQLの実行
+                                    //SQLの実行
                                     command.ExecuteNonQuery();
 
                                     MessageBox.Show("登録が完了しました。",
                                                     "登録完了！！",
                                                     MessageBoxButtons.OK,
                                                     MessageBoxIcon.Information);
+
+                                    //空白処理
+                                    Reset();
                                 }
                                 catch (Exception exception)
                                 {
@@ -1315,6 +1321,25 @@ namespace bowling_kai
             }
         }
 
+        /// <summary>
+        /// 「リセット」ボタン押下時
+        /// </summary>
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            //空白処理
+            Reset();
+        }
+
+        /// <summary>
+        /// 起動時時計が動くイベント
+        /// </summary>
+        private void timTime_Tick(object sender, EventArgs e)
+        {
+            DateTime dt = DateTime.Now;
+
+            //時刻を表示
+            lblTime.Text = dt.ToString("yyyy年MM月dd日 HH時mm分ss秒");
+        }
 
         #endregion
 
@@ -1519,7 +1544,8 @@ namespace bowling_kai
             }
             else
             {
-                return int.Parse(str);
+                int.TryParse(str, out int num);
+                return num;
             }
         }
 
@@ -1549,11 +1575,63 @@ namespace bowling_kai
             _total = _score[i-1] + _score[i] + _total;
         }
 
+        /// <summary>
+        /// 空白処理
+        /// </summary>
+        private void Reset()
+        {
+            cmb1_1.SelectedIndex = -1;
+            cmb1_2.SelectedIndex = -1;
+            cmb2_1.SelectedIndex = -1;
+            cmb2_2.SelectedIndex = -1;
+            cmb3_1.SelectedIndex = -1;
+            cmb3_2.SelectedIndex = -1;
+            cmb4_1.SelectedIndex = -1;
+            cmb4_2.SelectedIndex = -1;
+            cmb5_1.SelectedIndex = -1;
+            cmb5_2.SelectedIndex = -1;
+            cmb6_1.SelectedIndex = -1;
+            cmb6_2.SelectedIndex = -1;
+            cmb7_1.SelectedIndex = -1;
+            cmb7_2.SelectedIndex = -1;
+            cmb8_1.SelectedIndex = -1;
+            cmb8_2.SelectedIndex = -1;
+            cmb9_1.SelectedIndex = -1;
+            cmb9_2.SelectedIndex = -1;
+            cmb10_1.SelectedIndex = -1;
+            cmb10_2.SelectedIndex = -1;
+            cmb10_3.SelectedIndex = -1;
 
+            lbl1_sum.Text = "";
+            lbl2_sum.Text = "";
+            lbl3_sum.Text = "";
+            lbl4_sum.Text = "";
+            lbl5_sum.Text = "";
+            lbl6_sum.Text = "";
+            lbl7_sum.Text = "";
+            lbl8_sum.Text = "";
+            lbl9_sum.Text = "";
+            lbl10_sum.Text = "";
 
+            cmbYear.SelectedIndex = -1;
+            cmbMonth.SelectedIndex = -1;
+            cmbDay.SelectedIndex = -1;
 
-
+            cmb1_2.Enabled = false;
+            cmb2_2.Enabled = false;
+            cmb3_2.Enabled = false;
+            cmb4_2.Enabled = false;
+            cmb5_2.Enabled = false;
+            cmb6_2.Enabled = false;
+            cmb7_2.Enabled = false;
+            cmb8_2.Enabled = false;
+            cmb9_2.Enabled = false;
+            cmb10_2.Enabled = false;
+            cmb10_3.Enabled = false;
+        }
 
         #endregion
+
+        
     }
 }

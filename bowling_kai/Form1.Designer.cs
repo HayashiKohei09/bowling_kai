@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnlBack = new System.Windows.Forms.Panel();
             this.pnl10_3 = new System.Windows.Forms.Panel();
             this.cmb10_3 = new System.Windows.Forms.ComboBox();
@@ -119,8 +120,10 @@
             this.cmbYear = new System.Windows.Forms.ComboBox();
             this.lblYear = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.btnLook = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
             this.btnList = new System.Windows.Forms.Button();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.timTime = new System.Windows.Forms.Timer(this.components);
             this.pnlBack.SuspendLayout();
             this.pnl10_3.SuspendLayout();
             this.pnl10_2.SuspendLayout();
@@ -1168,7 +1171,7 @@
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btnAdd.Location = new System.Drawing.Point(91, 274);
+            this.btnAdd.Location = new System.Drawing.Point(42, 274);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(137, 61);
             this.btnAdd.TabIndex = 25;
@@ -1176,33 +1179,49 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // btnLook
+            // btnReset
             // 
-            this.btnLook.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btnLook.Location = new System.Drawing.Point(598, 312);
-            this.btnLook.Name = "btnLook";
-            this.btnLook.Size = new System.Drawing.Size(105, 37);
-            this.btnLook.TabIndex = 26;
-            this.btnLook.Text = "検　索";
-            this.btnLook.UseVisualStyleBackColor = true;
+            this.btnReset.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btnReset.Location = new System.Drawing.Point(220, 298);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(105, 37);
+            this.btnReset.TabIndex = 26;
+            this.btnReset.Text = "リセット";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnList
             // 
             this.btnList.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btnList.Location = new System.Drawing.Point(731, 312);
+            this.btnList.Location = new System.Drawing.Point(731, 298);
             this.btnList.Name = "btnList";
             this.btnList.Size = new System.Drawing.Size(98, 37);
             this.btnList.TabIndex = 27;
             this.btnList.Text = "一　覧";
             this.btnList.UseVisualStyleBackColor = true;
             // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblTime.Location = new System.Drawing.Point(477, 195);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(239, 19);
+            this.lblTime.TabIndex = 28;
+            this.lblTime.Text = "2018年9月15日　01時03分";
+            // 
+            // timTime
+            // 
+            this.timTime.Tick += new System.EventHandler(this.timTime_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(843, 361);
+            this.ClientSize = new System.Drawing.Size(843, 350);
+            this.Controls.Add(this.lblTime);
             this.Controls.Add(this.btnList);
-            this.Controls.Add(this.btnLook);
+            this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.lblYear);
             this.Controls.Add(this.cmbYear);
@@ -1375,8 +1394,10 @@
         private System.Windows.Forms.ComboBox cmbYear;
         private System.Windows.Forms.Label lblYear;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnLook;
+        private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button btnList;
+        private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Timer timTime;
     }
 }
 
