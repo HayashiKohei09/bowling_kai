@@ -124,6 +124,7 @@
             this.btnList = new System.Windows.Forms.Button();
             this.lblTime = new System.Windows.Forms.Label();
             this.timTime = new System.Windows.Forms.Timer(this.components);
+            this.btnClose = new System.Windows.Forms.Button();
             this.pnlBack.SuspendLayout();
             this.pnl10_3.SuspendLayout();
             this.pnl10_2.SuspendLayout();
@@ -1104,7 +1105,7 @@
             // 
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lblDate.Location = new System.Drawing.Point(102, 164);
+            this.lblDate.Location = new System.Drawing.Point(138, 165);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(120, 21);
             this.lblDate.TabIndex = 1;
@@ -1114,7 +1115,7 @@
             // 
             this.cmbMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMonth.FormattingEnabled = true;
-            this.cmbMonth.Location = new System.Drawing.Point(130, 198);
+            this.cmbMonth.Location = new System.Drawing.Point(166, 199);
             this.cmbMonth.Name = "cmbMonth";
             this.cmbMonth.Size = new System.Drawing.Size(52, 20);
             this.cmbMonth.TabIndex = 23;
@@ -1124,7 +1125,7 @@
             // 
             this.lblMonth.AutoSize = true;
             this.lblMonth.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lblMonth.Location = new System.Drawing.Point(191, 201);
+            this.lblMonth.Location = new System.Drawing.Point(227, 202);
             this.lblMonth.Name = "lblMonth";
             this.lblMonth.Size = new System.Drawing.Size(23, 15);
             this.lblMonth.TabIndex = 3;
@@ -1134,7 +1135,7 @@
             // 
             this.lblDay.AutoSize = true;
             this.lblDay.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lblDay.Location = new System.Drawing.Point(281, 201);
+            this.lblDay.Location = new System.Drawing.Point(317, 202);
             this.lblDay.Name = "lblDay";
             this.lblDay.Size = new System.Drawing.Size(23, 15);
             this.lblDay.TabIndex = 5;
@@ -1144,7 +1145,7 @@
             // 
             this.cmbDay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDay.FormattingEnabled = true;
-            this.cmbDay.Location = new System.Drawing.Point(220, 198);
+            this.cmbDay.Location = new System.Drawing.Point(256, 199);
             this.cmbDay.Name = "cmbDay";
             this.cmbDay.Size = new System.Drawing.Size(52, 20);
             this.cmbDay.TabIndex = 24;
@@ -1153,7 +1154,7 @@
             // 
             this.cmbYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbYear.FormattingEnabled = true;
-            this.cmbYear.Location = new System.Drawing.Point(23, 198);
+            this.cmbYear.Location = new System.Drawing.Point(59, 199);
             this.cmbYear.Name = "cmbYear";
             this.cmbYear.Size = new System.Drawing.Size(68, 20);
             this.cmbYear.TabIndex = 22;
@@ -1162,7 +1163,7 @@
             // 
             this.lblYear.AutoSize = true;
             this.lblYear.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lblYear.Location = new System.Drawing.Point(101, 201);
+            this.lblYear.Location = new System.Drawing.Point(137, 202);
             this.lblYear.Name = "lblYear";
             this.lblYear.Size = new System.Drawing.Size(23, 15);
             this.lblYear.TabIndex = 7;
@@ -1171,9 +1172,9 @@
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btnAdd.Location = new System.Drawing.Point(42, 274);
+            this.btnAdd.Location = new System.Drawing.Point(59, 255);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(137, 61);
+            this.btnAdd.Size = new System.Drawing.Size(137, 80);
             this.btnAdd.TabIndex = 25;
             this.btnAdd.Text = "登　録";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -1182,7 +1183,7 @@
             // btnReset
             // 
             this.btnReset.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btnReset.Location = new System.Drawing.Point(220, 298);
+            this.btnReset.Location = new System.Drawing.Point(237, 298);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(105, 37);
             this.btnReset.TabIndex = 26;
@@ -1193,18 +1194,19 @@
             // btnList
             // 
             this.btnList.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btnList.Location = new System.Drawing.Point(731, 298);
+            this.btnList.Location = new System.Drawing.Point(237, 255);
             this.btnList.Name = "btnList";
-            this.btnList.Size = new System.Drawing.Size(98, 37);
+            this.btnList.Size = new System.Drawing.Size(105, 37);
             this.btnList.TabIndex = 27;
             this.btnList.Text = "一　覧";
             this.btnList.UseVisualStyleBackColor = true;
+            this.btnList.Click += new System.EventHandler(this.btnList_Click);
             // 
             // lblTime
             // 
             this.lblTime.AutoSize = true;
             this.lblTime.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lblTime.Location = new System.Drawing.Point(477, 195);
+            this.lblTime.Location = new System.Drawing.Point(488, 223);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(239, 19);
             this.lblTime.TabIndex = 28;
@@ -1214,11 +1216,23 @@
             // 
             this.timTime.Tick += new System.EventHandler(this.timTime_Tick);
             // 
+            // btnClose
+            // 
+            this.btnClose.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btnClose.Location = new System.Drawing.Point(724, 298);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(105, 37);
+            this.btnClose.TabIndex = 29;
+            this.btnClose.Text = "終　了";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(843, 350);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblTime);
             this.Controls.Add(this.btnList);
             this.Controls.Add(this.btnReset);
@@ -1398,6 +1412,7 @@
         private System.Windows.Forms.Button btnList;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Timer timTime;
+        private System.Windows.Forms.Button btnClose;
     }
 }
 

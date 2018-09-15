@@ -8,3 +8,4 @@ C:\Users\林 晃平\source\repos\bowling_kai\bowling_kai\obj\Debug\bowling_kai.c
 C:\Users\林 晃平\source\repos\bowling_kai\bowling_kai\obj\Debug\bowling_kai.csproj.CoreCompileInputs.cache
 C:\Users\林 晃平\source\repos\bowling_kai\bowling_kai\obj\Debug\bowling_kai.exe
 C:\Users\林 晃平\source\repos\bowling_kai\bowling_kai\obj\Debug\bowling_kai.pdb
+C:\Users\林 晃平\source\repos\bowling_kai\bowling_kai\obj\Debug\bowling_kai.Form2.resources

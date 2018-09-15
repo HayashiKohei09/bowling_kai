@@ -1191,17 +1191,9 @@ namespace bowling_kai
                             {
                                 try
                                 {
-                                    //レコードの数を参照
-                                    command.CommandText = @"SELECT 登録No FROM bowling_kai.dbo.ボウリング";
-
-                                    //SQLの実行
-                                    var adapter = new SqlDataAdapter(command);
-                                    adapter.Fill(table);
-
                                     //実行するSQLの準備
                                     command.CommandText = @"INSERT INTO bowling_kai.dbo.ボウリング
-                                                            (登録No,
-                                                             年,
+                                                            (年,
                                                              月,
                                                              日,
                                                              Frame1_1,
@@ -1227,8 +1219,7 @@ namespace bowling_kai
                                                              Frame10_3,
                                                              Total)
                                                              VALUES
-                                                            (@No,
-                                                             @DataYear,
+                                                            (@DataYear,
                                                              @DataMonth,
                                                              @DataDay,
                                                              @1_1,
@@ -1253,8 +1244,7 @@ namespace bowling_kai
                                                              @10_2,
                                                              @10_3,
                                                              @total)";
-
-                                    command.Parameters.Add(new SqlParameter("@No", table.Rows.Count + 1));
+                                    
                                     command.Parameters.Add(new SqlParameter("@DataYear", cmbYear.Text));
                                     command.Parameters.Add(new SqlParameter("@DataMonth", cmbMonth.Text));
                                     command.Parameters.Add(new SqlParameter("@DataDay", cmbDay.Text));
@@ -1328,6 +1318,25 @@ namespace bowling_kai
         {
             //空白処理
             Reset();
+        }
+
+        /// <summary>
+        /// 「一覧」ボタン押下時
+        /// </summary>
+        private void btnList_Click(object sender, EventArgs e)
+        {
+            //スコア一覧の画面を表示
+            Form2 frm = new Form2();
+            frm.Show();
+        }
+
+        /// <summary>
+        /// 「終了」ボタン押下時
+        /// </summary>
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            //アプリケーションを閉じる
+            this.Close();
         }
 
         /// <summary>
@@ -1629,6 +1638,8 @@ namespace bowling_kai
             cmb10_2.Enabled = false;
             cmb10_3.Enabled = false;
         }
+
+
 
         #endregion
 
