@@ -60,6 +60,7 @@
             this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bowling_kaiDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ボウリングBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ボウリングDataGridView)).BeginInit();
@@ -130,7 +131,6 @@
             this.ボウリングDataGridView.DataSource = this.ボウリングBindingSource;
             this.ボウリングDataGridView.Location = new System.Drawing.Point(12, 12);
             this.ボウリングDataGridView.Name = "ボウリングDataGridView";
-            this.ボウリングDataGridView.ReadOnly = true;
             this.ボウリングDataGridView.RowTemplate.Height = 21;
             this.ボウリングDataGridView.Size = new System.Drawing.Size(1209, 220);
             this.ボウリングDataGridView.TabIndex = 3;
@@ -310,11 +310,23 @@
             this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
             this.dataGridViewTextBoxColumn26.Width = 56;
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btnDelete.Location = new System.Drawing.Point(922, 286);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(130, 49);
+            this.btnDelete.TabIndex = 4;
+            this.btnDelete.Text = "削　除";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1237, 358);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.ボウリングDataGridView);
             this.Controls.Add(this.btnBack);
             this.Name = "Form2";
@@ -359,5 +371,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
+        private System.Windows.Forms.Button btnDelete;
     }
 }
