@@ -1597,6 +1597,14 @@ namespace bowling_kai.bowling_kaiDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Frame10_3", "Frame10_3");
             tableMapping.ColumnMappings.Add("Total", "Total");
             this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM       ボウリング\r\nWHERE                       (年 = @Year) AND (月 = @Month)" +
+                " AND (日 = @Day)";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Year", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "年", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Month", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "月", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Day", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "日", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[ボウリング] ([年], [月], [日], [Frame1_1], [Frame1_2], [Frame2_1], [Frame2_2], [Frame3_1], [Frame3_2], [Frame4_1], [Frame4_2], [Frame5_1], [Frame5_2], [Frame6_1], [Frame6_2], [Frame7_1], [Frame7_2], [Frame8_1], [Frame8_2], [Frame9_1], [Frame9_2], [Frame10_1], [Frame10_2], [Frame10_3], [Total]) VALUES (@年, @月, @日, @Frame1_1, @Frame1_2, @Frame2_1, @Frame2_2, @Frame3_1, @Frame3_2, @Frame4_1, @Frame4_2, @Frame5_1, @Frame5_2, @Frame6_1, @Frame6_2, @Frame7_1, @Frame7_2, @Frame8_1, @Frame8_2, @Frame9_1, @Frame9_2, @Frame10_1, @Frame10_2, @Frame10_3, @Total)";
@@ -1699,6 +1707,45 @@ namespace bowling_kai.bowling_kaiDataSetTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(global::System.Data.DataRow[] dataRows) {
             return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(string Year, string Month, string Day) {
+            if ((Year == null)) {
+                throw new global::System.ArgumentNullException("Year");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Year));
+            }
+            if ((Month == null)) {
+                throw new global::System.ArgumentNullException("Month");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Month));
+            }
+            if ((Day == null)) {
+                throw new global::System.ArgumentNullException("Day");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Day));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

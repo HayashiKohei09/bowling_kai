@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿//Version 1.0.0 2018/09/20
+
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -1284,11 +1280,13 @@ namespace bowling_kai
                                 }
                                 catch (Exception exception)
                                 {
-                                    Console.WriteLine(exception.Message);
+                                    MessageBox.Show(exception.Message,
+                                                    "エラー",
+                                                    MessageBoxButtons.OK,
+                                                    MessageBoxIcon.Error);
 
                                     // ロールバック
                                     transaction.Rollback();
-                                    throw;
                                 }
                                 finally
                                 {
@@ -1296,10 +1294,6 @@ namespace bowling_kai
                                     transaction.Commit();
                                 }
                             }
-                        }
-                        catch
-                        {
-                            throw;
                         }
                         finally
                         {
@@ -1639,10 +1633,6 @@ namespace bowling_kai
             cmb10_3.Enabled = false;
         }
 
-
-
         #endregion
-
-        
     }
 }

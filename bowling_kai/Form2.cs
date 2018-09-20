@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Configuration;
-using System.Data.SqlClient;
+﻿//Version 1.0.0 2018/09/20
+
+using System;
 using System.Windows.Forms;
 
 namespace bowling_kai
@@ -29,6 +22,7 @@ namespace bowling_kai
         {
             // TODO: このコード行はデータを 'bowling_kaiDataSet.ボウリング' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
             this.ボウリングTableAdapter.Fill(this.bowling_kaiDataSet.ボウリング);
+
         }
 
         /// <summary>
@@ -40,31 +34,31 @@ namespace bowling_kai
             this.Close();
         }
 
+        /// <summary>
+        /// 「保存」アイコン押下時
+        /// </summary>
         private void ボウリングBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.ボウリングBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.bowling_kaiDataSet);
-
-        }
-
-
-        /// <summary>
-        /// 「削除」ボタン押下時
-        /// </summary>
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            DataGridViewSelectedRowCollection src = ボウリングDataGridView.SelectedRows;
             try
             {
-                //末尾から検索し、行を削除する
-                for (int i = src.Count - 1; i >= 0; i--)
+                DialogResult result = MessageBox.Show("更新してもよろしいですか？",
+                                                      "更新確認",
+                                                      MessageBoxButtons.OKCancel,
+                                                      MessageBoxIcon.Exclamation);
+                
+                if (result == DialogResult.OK)
                 {
-                    ボウリングDataGridView.Rows.RemoveAt(src[i].Index);
-                    
-                }ボウリングTableAdapter.Update(bowling_kaiDataSet);
+                    this.Validate();
+                    this.ボウリングBindingSource.EndEdit();
+                    this.tableAdapterManager.UpdateAll(this.bowling_kaiDataSet);
+
+                    MessageBox.Show("更新が完了しました。",
+                                    "更新完了",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+                }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 MessageBox.Show(ex.Message,
                                 "エラー",
