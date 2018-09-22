@@ -33,28 +33,5 @@ namespace bowling_kai.Properties {
                 return ((string)(this["bowling_kaiConnectionString"]));
             }
         }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=HAYASHIKOHEI;Initial Catalog=AdventureWorks2016;User ID=Kohei;Passwor" +
-            "d=19950912K")]
-        public string AdventureWorks2016ConnectionString {
-            get {
-                return ((string)(this["AdventureWorks2016ConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool test {
-            get {
-                return ((bool)(this["test"]));
-            }
-            set {
-                this["test"] = value;
-            }
-        }
     }
 }

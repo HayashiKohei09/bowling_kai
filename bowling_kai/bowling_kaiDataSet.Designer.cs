@@ -659,6 +659,15 @@ namespace bowling_kai {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public ボウリングRow FindBy年月日(string 年, string 月, string 日) {
+                return ((ボウリングRow)(this.Rows.Find(new object[] {
+                            年,
+                            月,
+                            日})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 ボウリングDataTable cln = ((ボウリングDataTable)(base.Clone()));
                 cln.InitVars();
@@ -754,12 +763,16 @@ namespace bowling_kai {
                 base.Columns.Add(this.columnFrame10_3);
                 this.columnTotal = new global::System.Data.DataColumn("Total", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTotal);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.column年,
+                                this.column月,
+                                this.column日}, true));
                 this.column年.AllowDBNull = false;
-                this.column年.MaxLength = 2147483647;
+                this.column年.MaxLength = 50;
                 this.column月.AllowDBNull = false;
-                this.column月.MaxLength = 2147483647;
+                this.column月.MaxLength = 50;
                 this.column日.AllowDBNull = false;
-                this.column日.MaxLength = 2147483647;
+                this.column日.MaxLength = 50;
                 this.columnFrame1_1.AllowDBNull = false;
                 this.columnFrame1_1.MaxLength = 2147483647;
                 this.columnFrame1_2.MaxLength = 2147483647;
@@ -1599,15 +1612,16 @@ namespace bowling_kai.bowling_kaiDataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM       ボウリング\r\nWHERE                       (年 = @Year) AND (月 = @Month)" +
-                " AND (日 = @Day)";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[ボウリング] WHERE (([年] = @Original_年) AND ([月] = @Original_月) AND " +
+                "([日] = @Original_日))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Year", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "年", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Month", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "月", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Day", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "日", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_年", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "年", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_月", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "月", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_日", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "日", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[ボウリング] ([年], [月], [日], [Frame1_1], [Frame1_2], [Frame2_1], [Frame2_2], [Frame3_1], [Frame3_2], [Frame4_1], [Frame4_2], [Frame5_1], [Frame5_2], [Frame6_1], [Frame6_2], [Frame7_1], [Frame7_2], [Frame8_1], [Frame8_2], [Frame9_1], [Frame9_2], [Frame10_1], [Frame10_2], [Frame10_3], [Total]) VALUES (@年, @月, @日, @Frame1_1, @Frame1_2, @Frame2_1, @Frame2_2, @Frame3_1, @Frame3_2, @Frame4_1, @Frame4_2, @Frame5_1, @Frame5_2, @Frame6_1, @Frame6_2, @Frame7_1, @Frame7_2, @Frame8_1, @Frame8_2, @Frame9_1, @Frame9_2, @Frame10_1, @Frame10_2, @Frame10_3, @Total)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[ボウリング] ([年], [月], [日], [Frame1_1], [Frame1_2], [Frame2_1], [Frame2_2], [Frame3_1], [Frame3_2], [Frame4_1], [Frame4_2], [Frame5_1], [Frame5_2], [Frame6_1], [Frame6_2], [Frame7_1], [Frame7_2], [Frame8_1], [Frame8_2], [Frame9_1], [Frame9_2], [Frame10_1], [Frame10_2], [Frame10_3], [Total]) VALUES (@年, @月, @日, @Frame1_1, @Frame1_2, @Frame2_1, @Frame2_2, @Frame3_1, @Frame3_2, @Frame4_1, @Frame4_2, @Frame5_1, @Frame5_2, @Frame6_1, @Frame6_2, @Frame7_1, @Frame7_2, @Frame8_1, @Frame8_2, @Frame9_1, @Frame9_2, @Frame10_1, @Frame10_2, @Frame10_3, @Total);
+SELECT 年, 月, 日, Frame1_1, Frame1_2, Frame2_1, Frame2_2, Frame3_1, Frame3_2, Frame4_1, Frame4_2, Frame5_1, Frame5_2, Frame6_1, Frame6_2, Frame7_1, Frame7_2, Frame8_1, Frame8_2, Frame9_1, Frame9_2, Frame10_1, Frame10_2, Frame10_3, Total FROM ボウリング WHERE (年 = @年) AND (日 = @日) AND (月 = @月)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@年", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "年", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@月", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "月", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1634,6 +1648,39 @@ namespace bowling_kai.bowling_kaiDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Frame10_2", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Frame10_2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Frame10_3", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Frame10_3", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Total", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Total", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[ボウリング] SET [年] = @年, [月] = @月, [日] = @日, [Frame1_1] = @Frame1_1, [Frame1_2] = @Frame1_2, [Frame2_1] = @Frame2_1, [Frame2_2] = @Frame2_2, [Frame3_1] = @Frame3_1, [Frame3_2] = @Frame3_2, [Frame4_1] = @Frame4_1, [Frame4_2] = @Frame4_2, [Frame5_1] = @Frame5_1, [Frame5_2] = @Frame5_2, [Frame6_1] = @Frame6_1, [Frame6_2] = @Frame6_2, [Frame7_1] = @Frame7_1, [Frame7_2] = @Frame7_2, [Frame8_1] = @Frame8_1, [Frame8_2] = @Frame8_2, [Frame9_1] = @Frame9_1, [Frame9_2] = @Frame9_2, [Frame10_1] = @Frame10_1, [Frame10_2] = @Frame10_2, [Frame10_3] = @Frame10_3, [Total] = @Total WHERE (([年] = @Original_年) AND ([月] = @Original_月) AND ([日] = @Original_日));
+SELECT 年, 月, 日, Frame1_1, Frame1_2, Frame2_1, Frame2_2, Frame3_1, Frame3_2, Frame4_1, Frame4_2, Frame5_1, Frame5_2, Frame6_1, Frame6_2, Frame7_1, Frame7_2, Frame8_1, Frame8_2, Frame9_1, Frame9_2, Frame10_1, Frame10_2, Frame10_3, Total FROM ボウリング WHERE (年 = @年) AND (日 = @日) AND (月 = @月)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@年", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "年", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@月", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "月", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@日", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "日", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Frame1_1", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Frame1_1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Frame1_2", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Frame1_2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Frame2_1", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Frame2_1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Frame2_2", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Frame2_2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Frame3_1", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Frame3_1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Frame3_2", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Frame3_2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Frame4_1", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Frame4_1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Frame4_2", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Frame4_2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Frame5_1", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Frame5_1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Frame5_2", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Frame5_2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Frame6_1", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Frame6_1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Frame6_2", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Frame6_2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Frame7_1", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Frame7_1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Frame7_2", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Frame7_2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Frame8_1", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Frame8_1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Frame8_2", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Frame8_2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Frame9_1", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Frame9_1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Frame9_2", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Frame9_2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Frame10_1", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Frame10_1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Frame10_2", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Frame10_2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Frame10_3", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Frame10_3", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Total", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Total", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_年", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "年", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_月", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "月", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_日", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "日", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1713,24 +1760,24 @@ namespace bowling_kai.bowling_kaiDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Year, string Month, string Day) {
-            if ((Year == null)) {
-                throw new global::System.ArgumentNullException("Year");
+        public virtual int Delete(string Original_年, string Original_月, string Original_日) {
+            if ((Original_年 == null)) {
+                throw new global::System.ArgumentNullException("Original_年");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Year));
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_年));
             }
-            if ((Month == null)) {
-                throw new global::System.ArgumentNullException("Month");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Month));
-            }
-            if ((Day == null)) {
-                throw new global::System.ArgumentNullException("Day");
+            if ((Original_月 == null)) {
+                throw new global::System.ArgumentNullException("Original_月");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Day));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_月));
+            }
+            if ((Original_日 == null)) {
+                throw new global::System.ArgumentNullException("Original_日");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_日));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1942,6 +1989,256 @@ namespace bowling_kai.bowling_kaiDataSetTableAdapters {
                     this.Adapter.InsertCommand.Connection.Close();
                 }
             }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    string 年, 
+                    string 月, 
+                    string 日, 
+                    string Frame1_1, 
+                    string Frame1_2, 
+                    string Frame2_1, 
+                    string Frame2_2, 
+                    string Frame3_1, 
+                    string Frame3_2, 
+                    string Frame4_1, 
+                    string Frame4_2, 
+                    string Frame5_1, 
+                    string Frame5_2, 
+                    string Frame6_1, 
+                    string Frame6_2, 
+                    string Frame7_1, 
+                    string Frame7_2, 
+                    string Frame8_1, 
+                    string Frame8_2, 
+                    string Frame9_1, 
+                    string Frame9_2, 
+                    string Frame10_1, 
+                    string Frame10_2, 
+                    string Frame10_3, 
+                    string Total, 
+                    string Original_年, 
+                    string Original_月, 
+                    string Original_日) {
+            if ((年 == null)) {
+                throw new global::System.ArgumentNullException("年");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(年));
+            }
+            if ((月 == null)) {
+                throw new global::System.ArgumentNullException("月");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(月));
+            }
+            if ((日 == null)) {
+                throw new global::System.ArgumentNullException("日");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(日));
+            }
+            if ((Frame1_1 == null)) {
+                throw new global::System.ArgumentNullException("Frame1_1");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Frame1_1));
+            }
+            if ((Frame1_2 == null)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Frame1_2));
+            }
+            if ((Frame2_1 == null)) {
+                throw new global::System.ArgumentNullException("Frame2_1");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Frame2_1));
+            }
+            if ((Frame2_2 == null)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Frame2_2));
+            }
+            if ((Frame3_1 == null)) {
+                throw new global::System.ArgumentNullException("Frame3_1");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Frame3_1));
+            }
+            if ((Frame3_2 == null)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Frame3_2));
+            }
+            if ((Frame4_1 == null)) {
+                throw new global::System.ArgumentNullException("Frame4_1");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Frame4_1));
+            }
+            if ((Frame4_2 == null)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Frame4_2));
+            }
+            if ((Frame5_1 == null)) {
+                throw new global::System.ArgumentNullException("Frame5_1");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Frame5_1));
+            }
+            if ((Frame5_2 == null)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Frame5_2));
+            }
+            if ((Frame6_1 == null)) {
+                throw new global::System.ArgumentNullException("Frame6_1");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Frame6_1));
+            }
+            if ((Frame6_2 == null)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Frame6_2));
+            }
+            if ((Frame7_1 == null)) {
+                throw new global::System.ArgumentNullException("Frame7_1");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Frame7_1));
+            }
+            if ((Frame7_2 == null)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Frame7_2));
+            }
+            if ((Frame8_1 == null)) {
+                throw new global::System.ArgumentNullException("Frame8_1");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Frame8_1));
+            }
+            if ((Frame8_2 == null)) {
+                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Frame8_2));
+            }
+            if ((Frame9_1 == null)) {
+                throw new global::System.ArgumentNullException("Frame9_1");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Frame9_1));
+            }
+            if ((Frame9_2 == null)) {
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Frame9_2));
+            }
+            if ((Frame10_1 == null)) {
+                throw new global::System.ArgumentNullException("Frame10_1");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Frame10_1));
+            }
+            if ((Frame10_2 == null)) {
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Frame10_2));
+            }
+            if ((Frame10_3 == null)) {
+                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Frame10_3));
+            }
+            if ((Total == null)) {
+                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Total));
+            }
+            if ((Original_年 == null)) {
+                throw new global::System.ArgumentNullException("Original_年");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_年));
+            }
+            if ((Original_月 == null)) {
+                throw new global::System.ArgumentNullException("Original_月");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(Original_月));
+            }
+            if ((Original_日 == null)) {
+                throw new global::System.ArgumentNullException("Original_日");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Original_日));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    string Frame1_1, 
+                    string Frame1_2, 
+                    string Frame2_1, 
+                    string Frame2_2, 
+                    string Frame3_1, 
+                    string Frame3_2, 
+                    string Frame4_1, 
+                    string Frame4_2, 
+                    string Frame5_1, 
+                    string Frame5_2, 
+                    string Frame6_1, 
+                    string Frame6_2, 
+                    string Frame7_1, 
+                    string Frame7_2, 
+                    string Frame8_1, 
+                    string Frame8_2, 
+                    string Frame9_1, 
+                    string Frame9_2, 
+                    string Frame10_1, 
+                    string Frame10_2, 
+                    string Frame10_3, 
+                    string Total, 
+                    string Original_年, 
+                    string Original_月, 
+                    string Original_日) {
+            return this.Update(Original_年, Original_月, Original_日, Frame1_1, Frame1_2, Frame2_1, Frame2_2, Frame3_1, Frame3_2, Frame4_1, Frame4_2, Frame5_1, Frame5_2, Frame6_1, Frame6_2, Frame7_1, Frame7_2, Frame8_1, Frame8_2, Frame9_1, Frame9_2, Frame10_1, Frame10_2, Frame10_3, Total, Original_年, Original_月, Original_日);
         }
     }
     

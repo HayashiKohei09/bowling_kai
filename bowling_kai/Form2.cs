@@ -1,4 +1,4 @@
-﻿//Version 1.0.0 2018/09/20
+﻿//Version 1.0.1 2018/09/22
 
 using System;
 using System.Windows.Forms;
@@ -45,7 +45,7 @@ namespace bowling_kai
                                                       "更新確認",
                                                       MessageBoxButtons.OKCancel,
                                                       MessageBoxIcon.Exclamation);
-                
+
                 if (result == DialogResult.OK)
                 {
                     this.Validate();
@@ -58,13 +58,24 @@ namespace bowling_kai
                                     MessageBoxIcon.Information);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message,
                                 "エラー",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Error);
             }
+        }
+
+        /// <summary>
+        /// 「削除」アイコン押下時
+        /// </summary>
+        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("削除しました。\n確定する場合は保存アイコンをクリックし更新を行ってください。",
+                            "削除しました",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Exclamation);
         }
     }
 }
