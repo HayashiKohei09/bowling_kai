@@ -1170,15 +1170,12 @@ namespace bowling_kai
 
                 if (result == DialogResult.OK)
                 {
-                    //接続文字列の取得(App.config内のname名)
-                    var connectionString = ConfigurationManager.ConnectionStrings["sqlsvr"].ConnectionString;
-
+                    string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Bowling.mdf;Integrated Security=True;Connect Timeout=30";
+                    
                     using (var connection = new SqlConnection(connectionString))
                     {
                         try
                         {
-                            var table = new DataTable();
-
                             //データベースの接続開始
                             connection.Open();
 
@@ -1188,7 +1185,7 @@ namespace bowling_kai
                                 try
                                 {
                                     //実行するSQLの準備
-                                    command.CommandText = @"INSERT INTO bowling_kai.dbo.ボウリング
+                                    command.CommandText = @"INSERT INTO dbo.Bowling_Table
                                                             (年,
                                                              月,
                                                              日,

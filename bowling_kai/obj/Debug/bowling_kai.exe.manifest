@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="bowling_kai.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="bowling_kai.exe" version="1.0.0.2" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <application />
   <entryPoint>
     <assemblyIdentity name="bowling_kai" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
@@ -42,17 +42,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="bowling_kai.exe" size="114120">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="bowling_kai.exe" size="130504">
       <assemblyIdentity name="bowling_kai" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>GRW37Bjs8nuBw93iCE/vR4cITenbiyeVtvItdmIsWPA=</dsig:DigestValue>
+        <dsig:DigestValue>LakP3AcSBGY6wOYbCxFixMmSKL6puocVKDGC02GaCFo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
+  <file name="Bowling.mdf" size="8388608" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>nrgQkks1PMuHfTRrvtae/FmosDny+do0ounA6xDwix8=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="bowling_kai.exe.config" size="18314">
     <hash>
       <dsig:Transforms>
@@ -60,6 +69,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>icxLQh3CxdsoldYDghrfkyBqrWXcxBvFofo1arTWQVU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Bowling_log.ldf" size="8388608" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>VUoQyiIbDubs614y2MD57nNT3DS9r7LsOGaZH9VUfdw=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

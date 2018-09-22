@@ -20,9 +20,8 @@ namespace bowling_kai
         /// </summary>
         private void Form2_Load(object sender, EventArgs e)
         {
-            // TODO: このコード行はデータを 'bowling_kaiDataSet.ボウリング' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
-            this.ボウリングTableAdapter.Fill(this.bowling_kaiDataSet.ボウリング);
-
+            // TODO: このコード行はデータを 'bowlingDataSet.Bowling_Table' テーブルに読み込みます。必要に応じて移動、または削除をしてください。
+            this.bowling_TableTableAdapter.Fill(this.bowlingDataSet.Bowling_Table);
         }
 
         /// <summary>
@@ -35,39 +34,6 @@ namespace bowling_kai
         }
 
         /// <summary>
-        /// 「保存」アイコン押下時
-        /// </summary>
-        private void ボウリングBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                DialogResult result = MessageBox.Show("更新してもよろしいですか？",
-                                                      "更新確認",
-                                                      MessageBoxButtons.OKCancel,
-                                                      MessageBoxIcon.Exclamation);
-
-                if (result == DialogResult.OK)
-                {
-                    this.Validate();
-                    this.ボウリングBindingSource.EndEdit();
-                    this.tableAdapterManager.UpdateAll(this.bowling_kaiDataSet);
-
-                    MessageBox.Show("更新が完了しました。",
-                                    "更新完了",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Information);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message,
-                                "エラー",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
-            }
-        }
-
-        /// <summary>
         /// 「削除」アイコン押下時
         /// </summary>
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
@@ -76,6 +42,13 @@ namespace bowling_kai
                             "削除しました",
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Exclamation);
+        }
+
+        private void bowling_TableBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.bowling_TableBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.bowlingDataSet);
         }
     }
 }

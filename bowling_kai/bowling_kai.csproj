@@ -76,10 +76,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="bowling_kaiDataSet.Designer.cs">
+    <Compile Include="BowlingDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>bowling_kaiDataSet.xsd</DependentUpon>
+      <DependentUpon>BowlingDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -110,18 +110,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="bowling_kaiDataSet.xsc">
-      <DependentUpon>bowling_kaiDataSet.xsd</DependentUpon>
+    <None Include="BowlingDataSet.xsc">
+      <DependentUpon>BowlingDataSet.xsd</DependentUpon>
     </None>
-    <None Include="bowling_kaiDataSet.xsd">
+    <None Include="BowlingDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>bowling_kaiDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>BowlingDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="bowling_kaiDataSet.xss">
-      <DependentUpon>bowling_kaiDataSet.xsd</DependentUpon>
+    <None Include="BowlingDataSet.xss">
+      <DependentUpon>BowlingDataSet.xsd</DependentUpon>
     </None>
-    <None Include="bowling_kai_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -148,6 +147,18 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Bowling.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Bowling_log.ldf">
+      <DependentUpon>Bowling.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

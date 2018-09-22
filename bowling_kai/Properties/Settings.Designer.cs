@@ -26,11 +26,11 @@ namespace bowling_kai.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=HAYASHIKOHEI;Initial Catalog=bowling_kai;Persist Security Info=True;U" +
-            "ser ID=Kohei;Password=19950912K")]
-        public string bowling_kaiConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Bowling.mdf;I" +
+            "ntegrated Security=True;Connect Timeout=30")]
+        public string BowlingConnectionString {
             get {
-                return ((string)(this["bowling_kaiConnectionString"]));
+                return ((string)(this["BowlingConnectionString"]));
             }
         }
     }
