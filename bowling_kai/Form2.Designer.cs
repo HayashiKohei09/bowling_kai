@@ -30,15 +30,17 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            this.bowlingDataSet = new bowling_kai.BowlingDataSet();
+            this.bowling_TableBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bowling_TableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bowlingDataSet = new bowling_kai.BowlingDataSet();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.bowling_TableBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.bowling_TableDataGridView = new System.Windows.Forms.DataGridView();
             this.bowling_TableTableAdapter = new bowling_kai.BowlingDataSetTableAdapters.Bowling_TableTableAdapter();
             this.tableAdapterManager = new bowling_kai.BowlingDataSetTableAdapters.TableAdapterManager();
-            this.bowling_TableBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bowling_TableBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.bowling_TableDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnBack = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,32 +66,12 @@
             this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.bowlingDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bowling_TableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bowling_TableBindingNavigator)).BeginInit();
             this.bowling_TableBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bowling_TableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bowlingDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bowling_TableDataGridView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // bowlingDataSet
-            // 
-            this.bowlingDataSet.DataSetName = "BowlingDataSet";
-            this.bowlingDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bowling_TableBindingSource
-            // 
-            this.bowling_TableBindingSource.DataMember = "Bowling_Table";
-            this.bowling_TableBindingSource.DataSource = this.bowlingDataSet;
-            // 
-            // bowling_TableTableAdapter
-            // 
-            this.bowling_TableTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.Bowling_TableTableAdapter = this.bowling_TableTableAdapter;
-            this.tableAdapterManager.UpdateOrder = bowling_kai.BowlingDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // bowling_TableBindingNavigator
             // 
@@ -99,7 +81,9 @@
             this.bowling_TableBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
             this.bowling_TableBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorDeleteItem,
-            this.bowling_TableBindingNavigatorSaveItem});
+            this.toolStripLabel1,
+            this.bowling_TableBindingNavigatorSaveItem,
+            this.toolStripLabel2});
             this.bowling_TableBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.bowling_TableBindingNavigator.MoveFirstItem = null;
             this.bowling_TableBindingNavigator.MoveLastItem = null;
@@ -107,9 +91,19 @@
             this.bowling_TableBindingNavigator.MovePreviousItem = null;
             this.bowling_TableBindingNavigator.Name = "bowling_TableBindingNavigator";
             this.bowling_TableBindingNavigator.PositionItem = null;
-            this.bowling_TableBindingNavigator.Size = new System.Drawing.Size(1444, 25);
+            this.bowling_TableBindingNavigator.Size = new System.Drawing.Size(1243, 25);
             this.bowling_TableBindingNavigator.TabIndex = 0;
             this.bowling_TableBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bowling_TableBindingSource
+            // 
+            this.bowling_TableBindingSource.DataMember = "Bowling_Table";
+            this.bowling_TableBindingSource.DataSource = this.bowlingDataSet;
+            // 
+            // bowlingDataSet
+            // 
+            this.bowlingDataSet.DataSetName = "BowlingDataSet";
+            this.bowlingDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorDeleteItem
             // 
@@ -119,6 +113,13 @@
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorDeleteItem.Text = "削除";
+            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click_1);
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(31, 22);
+            this.toolStripLabel1.Text = "削除";
             // 
             // bowling_TableBindingNavigatorSaveItem
             // 
@@ -129,13 +130,19 @@
             this.bowling_TableBindingNavigatorSaveItem.Text = "データの保存";
             this.bowling_TableBindingNavigatorSaveItem.Click += new System.EventHandler(this.bowling_TableBindingNavigatorSaveItem_Click);
             // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(31, 22);
+            this.toolStripLabel2.Text = "保存";
+            // 
             // bowling_TableDataGridView
             // 
             this.bowling_TableDataGridView.AutoGenerateColumns = false;
             this.bowling_TableDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.bowling_TableDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.bowling_TableDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bowling_TableDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
@@ -164,17 +171,31 @@
             this.bowling_TableDataGridView.DataSource = this.bowling_TableBindingSource;
             this.bowling_TableDataGridView.Location = new System.Drawing.Point(12, 28);
             this.bowling_TableDataGridView.Name = "bowling_TableDataGridView";
+            this.bowling_TableDataGridView.ReadOnly = true;
             this.bowling_TableDataGridView.RowTemplate.Height = 21;
-            this.bowling_TableDataGridView.Size = new System.Drawing.Size(1420, 220);
+            this.bowling_TableDataGridView.Size = new System.Drawing.Size(1210, 220);
             this.bowling_TableDataGridView.TabIndex = 1;
             // 
-            // dataGridViewTextBoxColumn1
+            // bowling_TableTableAdapter
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 41;
+            this.bowling_TableTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.Bowling_TableTableAdapter = this.bowling_TableTableAdapter;
+            this.tableAdapterManager.UpdateOrder = bowling_kai.BowlingDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // btnBack
+            // 
+            this.btnBack.Font = new System.Drawing.Font("HG創英角ﾎﾟｯﾌﾟ体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btnBack.Location = new System.Drawing.Point(1117, 284);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(105, 37);
+            this.btnBack.TabIndex = 30;
+            this.btnBack.Text = "戻　る";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -200,149 +221,149 @@
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "Frame1_1";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Frame1_1";
+            this.dataGridViewTextBoxColumn5.HeaderText = "1_1";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 78;
+            this.dataGridViewTextBoxColumn5.Width = 46;
             // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "Frame1_2";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Frame1_2";
+            this.dataGridViewTextBoxColumn6.HeaderText = "1_2";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Width = 78;
+            this.dataGridViewTextBoxColumn6.Width = 46;
             // 
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.DataPropertyName = "Frame2_1";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Frame2_1";
+            this.dataGridViewTextBoxColumn7.HeaderText = "2_1";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.Width = 78;
+            this.dataGridViewTextBoxColumn7.Width = 46;
             // 
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.DataPropertyName = "Frame2_2";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Frame2_2";
+            this.dataGridViewTextBoxColumn8.HeaderText = "2_2";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Width = 78;
+            this.dataGridViewTextBoxColumn8.Width = 46;
             // 
             // dataGridViewTextBoxColumn9
             // 
             this.dataGridViewTextBoxColumn9.DataPropertyName = "Frame3_1";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Frame3_1";
+            this.dataGridViewTextBoxColumn9.HeaderText = "3_1";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.Width = 78;
+            this.dataGridViewTextBoxColumn9.Width = 46;
             // 
             // dataGridViewTextBoxColumn10
             // 
             this.dataGridViewTextBoxColumn10.DataPropertyName = "Frame3_2";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Frame3_2";
+            this.dataGridViewTextBoxColumn10.HeaderText = "3_2";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.Width = 78;
+            this.dataGridViewTextBoxColumn10.Width = 46;
             // 
             // dataGridViewTextBoxColumn11
             // 
             this.dataGridViewTextBoxColumn11.DataPropertyName = "Frame4_1";
-            this.dataGridViewTextBoxColumn11.HeaderText = "Frame4_1";
+            this.dataGridViewTextBoxColumn11.HeaderText = "4_1";
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.Width = 78;
+            this.dataGridViewTextBoxColumn11.Width = 46;
             // 
             // dataGridViewTextBoxColumn12
             // 
             this.dataGridViewTextBoxColumn12.DataPropertyName = "Frame4_2";
-            this.dataGridViewTextBoxColumn12.HeaderText = "Frame4_2";
+            this.dataGridViewTextBoxColumn12.HeaderText = "4_2";
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.Width = 78;
+            this.dataGridViewTextBoxColumn12.Width = 46;
             // 
             // dataGridViewTextBoxColumn13
             // 
             this.dataGridViewTextBoxColumn13.DataPropertyName = "Frame5_1";
-            this.dataGridViewTextBoxColumn13.HeaderText = "Frame5_1";
+            this.dataGridViewTextBoxColumn13.HeaderText = "5_1";
             this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.Width = 78;
+            this.dataGridViewTextBoxColumn13.Width = 46;
             // 
             // dataGridViewTextBoxColumn14
             // 
             this.dataGridViewTextBoxColumn14.DataPropertyName = "Frame5_2";
-            this.dataGridViewTextBoxColumn14.HeaderText = "Frame5_2";
+            this.dataGridViewTextBoxColumn14.HeaderText = "5_2";
             this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.Width = 78;
+            this.dataGridViewTextBoxColumn14.Width = 46;
             // 
             // dataGridViewTextBoxColumn15
             // 
             this.dataGridViewTextBoxColumn15.DataPropertyName = "Frame6_1";
-            this.dataGridViewTextBoxColumn15.HeaderText = "Frame6_1";
+            this.dataGridViewTextBoxColumn15.HeaderText = "6_1";
             this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            this.dataGridViewTextBoxColumn15.Width = 78;
+            this.dataGridViewTextBoxColumn15.Width = 46;
             // 
             // dataGridViewTextBoxColumn16
             // 
             this.dataGridViewTextBoxColumn16.DataPropertyName = "Frame6_2";
-            this.dataGridViewTextBoxColumn16.HeaderText = "Frame6_2";
+            this.dataGridViewTextBoxColumn16.HeaderText = "6_2";
             this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            this.dataGridViewTextBoxColumn16.Width = 78;
+            this.dataGridViewTextBoxColumn16.Width = 46;
             // 
             // dataGridViewTextBoxColumn17
             // 
             this.dataGridViewTextBoxColumn17.DataPropertyName = "Frame7_1";
-            this.dataGridViewTextBoxColumn17.HeaderText = "Frame7_1";
+            this.dataGridViewTextBoxColumn17.HeaderText = "7_1";
             this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            this.dataGridViewTextBoxColumn17.Width = 78;
+            this.dataGridViewTextBoxColumn17.Width = 46;
             // 
             // dataGridViewTextBoxColumn18
             // 
             this.dataGridViewTextBoxColumn18.DataPropertyName = "Frame7_2";
-            this.dataGridViewTextBoxColumn18.HeaderText = "Frame7_2";
+            this.dataGridViewTextBoxColumn18.HeaderText = "7_2";
             this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            this.dataGridViewTextBoxColumn18.Width = 78;
+            this.dataGridViewTextBoxColumn18.Width = 46;
             // 
             // dataGridViewTextBoxColumn19
             // 
             this.dataGridViewTextBoxColumn19.DataPropertyName = "Frame8_1";
-            this.dataGridViewTextBoxColumn19.HeaderText = "Frame8_1";
+            this.dataGridViewTextBoxColumn19.HeaderText = "8_1";
             this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            this.dataGridViewTextBoxColumn19.Width = 78;
+            this.dataGridViewTextBoxColumn19.Width = 46;
             // 
             // dataGridViewTextBoxColumn20
             // 
             this.dataGridViewTextBoxColumn20.DataPropertyName = "Frame8_2";
-            this.dataGridViewTextBoxColumn20.HeaderText = "Frame8_2";
+            this.dataGridViewTextBoxColumn20.HeaderText = "8_2";
             this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            this.dataGridViewTextBoxColumn20.Width = 78;
+            this.dataGridViewTextBoxColumn20.Width = 46;
             // 
             // dataGridViewTextBoxColumn21
             // 
             this.dataGridViewTextBoxColumn21.DataPropertyName = "Frame9_1";
-            this.dataGridViewTextBoxColumn21.HeaderText = "Frame9_1";
+            this.dataGridViewTextBoxColumn21.HeaderText = "9_1";
             this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            this.dataGridViewTextBoxColumn21.Width = 78;
+            this.dataGridViewTextBoxColumn21.Width = 46;
             // 
             // dataGridViewTextBoxColumn22
             // 
             this.dataGridViewTextBoxColumn22.DataPropertyName = "Frame9_2";
-            this.dataGridViewTextBoxColumn22.HeaderText = "Frame9_2";
+            this.dataGridViewTextBoxColumn22.HeaderText = "9_2";
             this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
-            this.dataGridViewTextBoxColumn22.Width = 78;
+            this.dataGridViewTextBoxColumn22.Width = 46;
             // 
             // dataGridViewTextBoxColumn23
             // 
             this.dataGridViewTextBoxColumn23.DataPropertyName = "Frame10_1";
-            this.dataGridViewTextBoxColumn23.HeaderText = "Frame10_1";
+            this.dataGridViewTextBoxColumn23.HeaderText = "10_1";
             this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
-            this.dataGridViewTextBoxColumn23.Width = 84;
+            this.dataGridViewTextBoxColumn23.Width = 52;
             // 
             // dataGridViewTextBoxColumn24
             // 
             this.dataGridViewTextBoxColumn24.DataPropertyName = "Frame10_2";
-            this.dataGridViewTextBoxColumn24.HeaderText = "Frame10_2";
+            this.dataGridViewTextBoxColumn24.HeaderText = "10_2";
             this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
-            this.dataGridViewTextBoxColumn24.Width = 84;
+            this.dataGridViewTextBoxColumn24.Width = 52;
             // 
             // dataGridViewTextBoxColumn25
             // 
             this.dataGridViewTextBoxColumn25.DataPropertyName = "Frame10_3";
-            this.dataGridViewTextBoxColumn25.HeaderText = "Frame10_3";
+            this.dataGridViewTextBoxColumn25.HeaderText = "10_3";
             this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
-            this.dataGridViewTextBoxColumn25.Width = 84;
+            this.dataGridViewTextBoxColumn25.Width = 52;
             // 
             // dataGridViewTextBoxColumn26
             // 
@@ -355,17 +376,19 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1444, 333);
+            this.ClientSize = new System.Drawing.Size(1243, 333);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.bowling_TableDataGridView);
             this.Controls.Add(this.bowling_TableBindingNavigator);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bowlingDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bowling_TableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bowling_TableBindingNavigator)).EndInit();
             this.bowling_TableBindingNavigator.ResumeLayout(false);
             this.bowling_TableBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bowling_TableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bowlingDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bowling_TableDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -382,7 +405,9 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
         private System.Windows.Forms.ToolStripButton bowling_TableBindingNavigatorSaveItem;
         private System.Windows.Forms.DataGridView bowling_TableDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
+        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
