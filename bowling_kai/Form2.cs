@@ -1,4 +1,7 @@
-﻿//Version 1.0.1 2018/09/22
+﻿//Version 1.0.0 2018/09/20
+//Version 1.0.1 2018/09/22
+//Version 1.0.2 2018/09/23
+//Version 1.0.3 2018/09/23
 
 using System;
 using System.Windows.Forms;
@@ -36,7 +39,7 @@ namespace bowling_kai
         /// <summary>
         /// 「削除」アイコン押下時
         /// </summary>
-        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        private void bindingNavigatorDeleteItem_Click_1(object sender, EventArgs e)
         {
             MessageBox.Show("削除しました。\n確定する場合は保存アイコンをクリックし更新を行ってください。",
                             "削除しました",
@@ -44,11 +47,29 @@ namespace bowling_kai
                             MessageBoxIcon.Exclamation);
         }
 
+        /// <summary>
+        /// 「保存」アイコン押下時
+        /// </summary>
         private void bowling_TableBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.bowling_TableBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.bowlingDataSet);
+            DialogResult result = MessageBox.Show("スコアを更新します。\nよろしいですか？",
+                                                  "スコア更新",
+                                                  MessageBoxButtons.OKCancel,
+                                                  MessageBoxIcon.Exclamation);
+
+            if (result == DialogResult.OK)
+            {
+                this.Validate();
+                this.bowling_TableBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.bowlingDataSet);
+
+                MessageBox.Show("更新に成功しました。",
+                                "更新しました",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Exclamation);
+            }
         }
+
+        
     }
 }

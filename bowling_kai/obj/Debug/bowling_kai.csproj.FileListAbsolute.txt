@@ -15,3 +15,7 @@ C:\Users\林 晃平\source\repos\bowling_kai\bowling_kai\obj\Debug\bowling_kai.e
 C:\Users\林 晃平\source\repos\bowling_kai\bowling_kai\obj\Debug\bowling_kai.application
 C:\Users\林 晃平\source\repos\bowling_kai\bowling_kai\bin\Debug\Bowling.mdf
 C:\Users\林 晃平\source\repos\bowling_kai\bowling_kai\bin\Debug\Bowling_log.ldf
+C:\Users\林 晃平\source\repos\bowling_kai\bowling_kai\bin\Debug\BowlingDataSet.Designer.cs
+C:\Users\林 晃平\source\repos\bowling_kai\bowling_kai\bin\Debug\BowlingDataSet.xsc
+C:\Users\林 晃平\source\repos\bowling_kai\bowling_kai\bin\Debug\BowlingDataSet.xsd
+C:\Users\林 晃平\source\repos\bowling_kai\bowling_kai\bin\Debug\BowlingDataSet.xss
