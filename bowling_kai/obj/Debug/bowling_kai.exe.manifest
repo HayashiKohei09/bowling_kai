@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="bowling_kai.exe" size="460744">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="bowling_kai.exe" size="130504">
       <assemblyIdentity name="bowling_kai" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>O7cuP0K9GzS9GLjocmoJZVU86RD4WRsmm1pHrnqIcQ0=</dsig:DigestValue>
+        <dsig:DigestValue>LakP3AcSBGY6wOYbCxFixMmSKL6puocVKDGC02GaCFo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -59,7 +59,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>8mXzEaKsxM59rrirw4Tq9Y7wcH77acGfgkD17QUuqz4=</dsig:DigestValue>
+      <dsig:DigestValue>nrgQkks1PMuHfTRrvtae/FmosDny+do0ounA6xDwix8=</dsig:DigestValue>
     </hash>
   </file>
   <file name="bowling_kai.exe.config" size="18314">
@@ -77,7 +77,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>8yCxez1GEPyAd8HN6jjrTwLnMeNEAL58thibJiVh9tA=</dsig:DigestValue>
+      <dsig:DigestValue>VUoQyiIbDubs614y2MD57nNT3DS9r7LsOGaZH9VUfdw=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

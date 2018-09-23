@@ -1,9 +1,8 @@
-﻿//Version 1.0.0 2018/09/20
-//Version 1.0.1 2018/09/22
-//Version 1.0.2 2018/09/23
-//Version 1.0.3 2018/09/23
+﻿//Version 1.0.1 2018/09/22
 
 using System;
+using System.Data;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -1171,11 +1170,8 @@ namespace bowling_kai
 
                 if (result == DialogResult.OK)
                 {
-                    string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;
-                                                AttachDbFilename=|DataDirectory|\Bowling.mdf;
-                                                Integrated Security=True;
-                                                Connect Timeout=30";
-
+                    string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Bowling.mdf;Integrated Security=True;Connect Timeout=30";
+                    
                     using (var connection = new SqlConnection(connectionString))
                     {
                         try

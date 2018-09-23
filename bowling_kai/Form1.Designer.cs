@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pnlBack = new System.Windows.Forms.Panel();
             this.pnl10_3 = new System.Windows.Forms.Panel();
             this.cmb10_3 = new System.Windows.Forms.ComboBox();
@@ -1246,7 +1245,6 @@
             this.Controls.Add(this.cmbMonth);
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.pnlBack);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "ボウリングスコア";
             this.Load += new System.EventHandler(this.Form1_Load);

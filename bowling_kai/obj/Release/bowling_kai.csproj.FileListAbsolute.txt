@@ -8,10 +8,3 @@ C:\Users\林 晃平\source\repos\bowling_kai\bowling_kai\obj\Release\bowling_kai
 C:\Users\林 晃平\source\repos\bowling_kai\bowling_kai\obj\Release\bowling_kai.csproj.CoreCompileInputs.cache
 C:\Users\林 晃平\source\repos\bowling_kai\bowling_kai\obj\Release\bowling_kai.exe
 C:\Users\林 晃平\source\repos\bowling_kai\bowling_kai\obj\Release\bowling_kai.pdb
-C:\Users\林 晃平\source\repos\bowling_kai\bowling_kai\bin\Release\Bowling.mdf
-C:\Users\林 晃平\source\repos\bowling_kai\bowling_kai\bin\Release\Bowling_log.ldf
-C:\Users\林 晃平\source\repos\bowling_kai\bowling_kai\bin\Release\bowling_kai.exe.manifest
-C:\Users\林 晃平\source\repos\bowling_kai\bowling_kai\bin\Release\bowling_kai.application
-C:\Users\林 晃平\source\repos\bowling_kai\bowling_kai\obj\Release\bowling_kai.csprojAssemblyReference.cache
-C:\Users\林 晃平\source\repos\bowling_kai\bowling_kai\obj\Release\bowling_kai.exe.manifest
-C:\Users\林 晃平\source\repos\bowling_kai\bowling_kai\obj\Release\bowling_kai.application
