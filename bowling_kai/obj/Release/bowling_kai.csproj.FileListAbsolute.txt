@@ -40,3 +40,9 @@ C:\Users\林 晃平\source\repos\source\repos\bowling_kai\bowling_kai\obj\Releas
 C:\Users\林 晃平\source\repos\source\repos\bowling_kai\bowling_kai\obj\Release\bowling_kai.application
 C:\Users\林 晃平\source\repos\source\repos\bowling_kai\bowling_kai\obj\Release\bowling_kai.exe
 C:\Users\林 晃平\source\repos\source\repos\bowling_kai\bowling_kai\obj\Release\bowling_kai.pdb
+C:\Users\林 晃平\source\repos\source\repos\bowling_kai\bowling_kai\bin\Release\System.Net.Http.dll
+C:\Users\林 晃平\source\repos\source\repos\bowling_kai\bowling_kai\bin\Release\System.Security.Cryptography.Algorithms.dll
+C:\Users\林 晃平\source\repos\source\repos\bowling_kai\bowling_kai\bin\Release\System.Security.Cryptography.Encoding.dll
+C:\Users\林 晃平\source\repos\source\repos\bowling_kai\bowling_kai\bin\Release\System.Security.Cryptography.Primitives.dll
+C:\Users\林 晃平\source\repos\source\repos\bowling_kai\bowling_kai\bin\Release\System.Security.Cryptography.X509Certificates.dll
+C:\Users\林 晃平\source\repos\source\repos\bowling_kai\bowling_kai\obj\Release\bowling_kai.csproj.CopyComplete

@@ -7,14 +7,14 @@
     <framework targetVersion="4.6.1" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="bowling_kai.exe.manifest" size="4882">
+    <dependentAssembly dependencyType="install" codebase="bowling_kai.exe.manifest" size="8493">
       <assemblyIdentity name="bowling_kai.exe" version="1.0.0.4" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>IclWckj/CKl+xHXFV6Rb0QBu2i8Zs6XJyhK4MYf+my8=</dsig:DigestValue>
+        <dsig:DigestValue>ntLA2hG+L7y6iHqM6yMwO2V51Q7H7Ql4H/8FMtPg/mM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

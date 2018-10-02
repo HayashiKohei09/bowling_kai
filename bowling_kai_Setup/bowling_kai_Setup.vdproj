@@ -39,14 +39,8 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_EF1E2A44A6747466836D4D8FA97720D2"
         "OwnerKey" = "8:_5DAD3C0EC452478296AF822FA654C456"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_EF1E2A44A6747466836D4D8FA97720D2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -73,6 +67,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -89,6 +91,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -165,11 +175,6 @@
             "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
-                    "_EF1E2A44A6747466836D4D8FA97720D2"
-                    {
-                    "Name" = "8:System.Net.Http.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
@@ -255,7 +260,7 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:bowling_kai_Setup"
+        "ProductName" = "8:bowling_kai"
         "ProductCode" = "8:{68C765D0-8261-4511-969F-E44FE1F37B67}"
         "PackageCode" = "8:{58F54747-B3E3-45F8-8E6D-DEA6C7A0F498}"
         "UpgradeCode" = "8:{BF8DBA14-2AA3-4A3A-97C2-E90B53BDD35A}"
@@ -265,12 +270,12 @@
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
         "ProductVersion" = "8:1.0.0"
-        "Manufacturer" = "8:bowling_kai_Setup"
+        "Manufacturer" = "8:bowling_kai"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:bowling_kai_Setup"
+        "Title" = "8:bowling_kai"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:bowling_kai_Setup"
+        "ARPCONTACT" = "8:bowling_kai"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
