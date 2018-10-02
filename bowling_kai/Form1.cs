@@ -34,7 +34,7 @@ namespace bowling_kai
             InitializeComponent();
         }
         
-        #region イベント
+        #region  イベント
 
         /// <summary>
         /// Loadイベント
