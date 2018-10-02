@@ -46,3 +46,7 @@ C:\Users\林 晃平\source\repos\source\repos\bowling_kai\bowling_kai\bin\Releas
 C:\Users\林 晃平\source\repos\source\repos\bowling_kai\bowling_kai\bin\Release\System.Security.Cryptography.Primitives.dll
 C:\Users\林 晃平\source\repos\source\repos\bowling_kai\bowling_kai\bin\Release\System.Security.Cryptography.X509Certificates.dll
 C:\Users\林 晃平\source\repos\source\repos\bowling_kai\bowling_kai\obj\Release\bowling_kai.csproj.CopyComplete
+C:\Users\林 晃平\source\repos\source\repos\bowling_kai\bowling_kai\bin\Release\System.Net.Http.Extensions.dll
+C:\Users\林 晃平\source\repos\source\repos\bowling_kai\bowling_kai\bin\Release\System.Net.Http.Formatting.dll
+C:\Users\林 晃平\source\repos\source\repos\bowling_kai\bowling_kai\bin\Release\System.Net.Http.Primitives.dll
+C:\Users\林 晃平\source\repos\source\repos\bowling_kai\bowling_kai\bin\Release\Newtonsoft.Json.dll
