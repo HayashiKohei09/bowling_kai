@@ -2,6 +2,7 @@
 //Version 1.0.1 2018/09/22
 //Version 1.0.2 2018/09/23
 //Version 1.0.3 2018/09/23
+//Version 1.0.4 2018/10/03
 
 using System;
 using System.Windows.Forms;
