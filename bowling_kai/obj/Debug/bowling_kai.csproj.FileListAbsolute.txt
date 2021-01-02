@@ -40,3 +40,11 @@ C:\Users\林 晃平\source\repos\source\repos\bowling_kai\bowling_kai\obj\Debug\
 C:\Users\林 晃平\source\repos\source\repos\bowling_kai\bowling_kai\obj\Debug\bowling_kai.application
 C:\Users\林 晃平\source\repos\source\repos\bowling_kai\bowling_kai\obj\Debug\bowling_kai.exe
 C:\Users\林 晃平\source\repos\source\repos\bowling_kai\bowling_kai\obj\Debug\bowling_kai.pdb
+E:\kouhei\Program\bowling_kai\bowling_kai\obj\Debug\bowling_kai.csprojAssemblyReference.cache
+E:\kouhei\Program\bowling_kai\bowling_kai\obj\Debug\bowling_kai.Form1.resources
+E:\kouhei\Program\bowling_kai\bowling_kai\obj\Debug\bowling_kai.Form2.resources
+E:\kouhei\Program\bowling_kai\bowling_kai\obj\Debug\bowling_kai.Properties.Resources.resources
+E:\kouhei\Program\bowling_kai\bowling_kai\obj\Debug\bowling_kai.csproj.GenerateResource.cache
+E:\kouhei\Program\bowling_kai\bowling_kai\obj\Debug\bowling_kai.csproj.CoreCompileInputs.cache
+E:\kouhei\Program\bowling_kai\bowling_kai\obj\Debug\bowling_kai.exe
+E:\kouhei\Program\bowling_kai\bowling_kai\obj\Debug\bowling_kai.pdb

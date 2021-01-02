@@ -14,7 +14,7 @@
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <HockeyAppResourceId>d7d6f3055ee3411f992a297cf43bcb69</HockeyAppResourceId>
-    <PublishUrl>publish\</PublishUrl>
+    <PublishUrl>E:\kouhei\Program\test\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
