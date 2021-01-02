@@ -1,4 +1,8 @@
-﻿【インストール手順】
+【環境】
+・SQLServerをインストールしてください。
+https://www.microsoft.com/ja-jp/sql-server/sql-server-downloads
+ 
+ 【インストール手順】
 
 1.setup.exeをダブルクリックしてください。
 
