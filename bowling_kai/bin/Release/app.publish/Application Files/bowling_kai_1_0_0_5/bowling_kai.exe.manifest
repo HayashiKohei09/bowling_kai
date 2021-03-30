@@ -177,7 +177,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>AUeD/WVT48N8AViUjqFCbEVOVdlUt9H0/TZjb9c42qw=</dsig:DigestValue>
+      <dsig:DigestValue>+bJUmfbOzDPqA5orYxwgrt6ilFP3OBPB3RhRCD/q2UM=</dsig:DigestValue>
     </hash>
   </file>
   <file name="bowling_kai.exe.config" size="733">
@@ -195,7 +195,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>U+cdN1HAr3POzSMJy42E9Hg31kejl+USOG+pyaRmXGk=</dsig:DigestValue>
+      <dsig:DigestValue>WyqsXGsPxJWf7Gu/wnh4NrYYMYG8i5P1JomJ+Tspi5o=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
