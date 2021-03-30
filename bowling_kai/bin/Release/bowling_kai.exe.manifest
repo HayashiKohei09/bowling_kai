@@ -4,7 +4,7 @@
   <description asmv2:iconFile="bowling.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="bowling_kai" version="1.0.0.5" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="bowling_kai" version="1.0.0.5" publicKeyToken="4D6D5194F97AF612" language="neutral" processorArchitecture="msil" />
     <commandLine file="bowling_kai.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="bowling_kai.exe" size="619920">
-      <assemblyIdentity name="bowling_kai" version="1.0.0.5" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="bowling_kai.exe" size="619008">
+      <assemblyIdentity name="bowling_kai" version="1.0.0.5" publicKeyToken="4D6D5194F97AF612" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>1DcQOWhu0U4b6w1n5orNLy1LYvF+yjfv+afhqGjWCTc=</dsig:DigestValue>
+        <dsig:DigestValue>4esgTpGsF/WJbgjsLhTBURkW3ulkMit7oLfCNdLV4l8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
