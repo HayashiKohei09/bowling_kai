@@ -58,3 +58,34 @@ E:\kouhei\Program\bowling_kai\bowling_kai\obj\Release\bowling_kai.csproj.Generat
 E:\kouhei\Program\bowling_kai\bowling_kai\obj\Release\bowling_kai.csproj.CoreCompileInputs.cache
 E:\kouhei\Program\bowling_kai\bowling_kai\obj\Release\bowling_kai.exe
 E:\kouhei\Program\bowling_kai\bowling_kai\obj\Release\bowling_kai.pdb
+E:\Visual Studio\Source\bowling_kai\bowling_kai\bin\Release\BowlingDataSet.Designer.cs
+E:\Visual Studio\Source\bowling_kai\bowling_kai\bin\Release\BowlingDataSet.xsc
+E:\Visual Studio\Source\bowling_kai\bowling_kai\bin\Release\BowlingDataSet.xsd
+E:\Visual Studio\Source\bowling_kai\bowling_kai\bin\Release\BowlingDataSet.xss
+E:\Visual Studio\Source\bowling_kai\bowling_kai\bin\Release\Bowling.mdf
+E:\Visual Studio\Source\bowling_kai\bowling_kai\bin\Release\Bowling_log.ldf
+E:\Visual Studio\Source\bowling_kai\bowling_kai\bin\Release\bowling_kai.exe.config
+E:\Visual Studio\Source\bowling_kai\bowling_kai\bin\Release\bowling_kai.exe.manifest
+E:\Visual Studio\Source\bowling_kai\bowling_kai\bin\Release\bowling_kai.application
+E:\Visual Studio\Source\bowling_kai\bowling_kai\bin\Release\bowling_kai.exe
+E:\Visual Studio\Source\bowling_kai\bowling_kai\bin\Release\bowling_kai.pdb
+E:\Visual Studio\Source\bowling_kai\bowling_kai\bin\Release\System.Net.Http.dll
+E:\Visual Studio\Source\bowling_kai\bowling_kai\bin\Release\System.Net.Http.Extensions.dll
+E:\Visual Studio\Source\bowling_kai\bowling_kai\bin\Release\System.Net.Http.Formatting.dll
+E:\Visual Studio\Source\bowling_kai\bowling_kai\bin\Release\System.Net.Http.Primitives.dll
+E:\Visual Studio\Source\bowling_kai\bowling_kai\bin\Release\System.Security.Cryptography.Algorithms.dll
+E:\Visual Studio\Source\bowling_kai\bowling_kai\bin\Release\System.Security.Cryptography.Encoding.dll
+E:\Visual Studio\Source\bowling_kai\bowling_kai\bin\Release\System.Security.Cryptography.Primitives.dll
+E:\Visual Studio\Source\bowling_kai\bowling_kai\bin\Release\System.Security.Cryptography.X509Certificates.dll
+E:\Visual Studio\Source\bowling_kai\bowling_kai\bin\Release\Newtonsoft.Json.dll
+E:\Visual Studio\Source\bowling_kai\bowling_kai\obj\Release\bowling_kai.csprojAssemblyReference.cache
+E:\Visual Studio\Source\bowling_kai\bowling_kai\obj\Release\bowling_kai.Form1.resources
+E:\Visual Studio\Source\bowling_kai\bowling_kai\obj\Release\bowling_kai.Form2.resources
+E:\Visual Studio\Source\bowling_kai\bowling_kai\obj\Release\bowling_kai.Properties.Resources.resources
+E:\Visual Studio\Source\bowling_kai\bowling_kai\obj\Release\bowling_kai.csproj.GenerateResource.cache
+E:\Visual Studio\Source\bowling_kai\bowling_kai\obj\Release\bowling_kai.csproj.CoreCompileInputs.cache
+E:\Visual Studio\Source\bowling_kai\bowling_kai\obj\Release\bowling_kai.exe.manifest
+E:\Visual Studio\Source\bowling_kai\bowling_kai\obj\Release\bowling_kai.application
+E:\Visual Studio\Source\bowling_kai\bowling_kai\obj\Release\bowling_kai.csproj.CopyComplete
+E:\Visual Studio\Source\bowling_kai\bowling_kai\obj\Release\bowling_kai.exe
+E:\Visual Studio\Source\bowling_kai\bowling_kai\obj\Release\bowling_kai.pdb

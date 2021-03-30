@@ -48,3 +48,34 @@ E:\kouhei\Program\bowling_kai\bowling_kai\obj\Debug\bowling_kai.csproj.GenerateR
 E:\kouhei\Program\bowling_kai\bowling_kai\obj\Debug\bowling_kai.csproj.CoreCompileInputs.cache
 E:\kouhei\Program\bowling_kai\bowling_kai\obj\Debug\bowling_kai.exe
 E:\kouhei\Program\bowling_kai\bowling_kai\obj\Debug\bowling_kai.pdb
+E:\Visual Studio\Source\bowling_kai\bowling_kai\obj\Debug\bowling_kai.csprojAssemblyReference.cache
+E:\Visual Studio\Source\bowling_kai\bowling_kai\obj\Debug\bowling_kai.Form1.resources
+E:\Visual Studio\Source\bowling_kai\bowling_kai\obj\Debug\bowling_kai.Form2.resources
+E:\Visual Studio\Source\bowling_kai\bowling_kai\obj\Debug\bowling_kai.Properties.Resources.resources
+E:\Visual Studio\Source\bowling_kai\bowling_kai\obj\Debug\bowling_kai.csproj.GenerateResource.cache
+E:\Visual Studio\Source\bowling_kai\bowling_kai\obj\Debug\bowling_kai.csproj.CoreCompileInputs.cache
+E:\Visual Studio\Source\bowling_kai\bowling_kai\obj\Debug\bowling_kai.exe
+E:\Visual Studio\Source\bowling_kai\bowling_kai\obj\Debug\bowling_kai.pdb
+E:\Visual Studio\Source\bowling_kai\bowling_kai\bin\Debug\BowlingDataSet.Designer.cs
+E:\Visual Studio\Source\bowling_kai\bowling_kai\bin\Debug\BowlingDataSet.xsc
+E:\Visual Studio\Source\bowling_kai\bowling_kai\bin\Debug\BowlingDataSet.xsd
+E:\Visual Studio\Source\bowling_kai\bowling_kai\bin\Debug\BowlingDataSet.xss
+E:\Visual Studio\Source\bowling_kai\bowling_kai\bin\Debug\Bowling.mdf
+E:\Visual Studio\Source\bowling_kai\bowling_kai\bin\Debug\Bowling_log.ldf
+E:\Visual Studio\Source\bowling_kai\bowling_kai\bin\Debug\bowling_kai.exe.config
+E:\Visual Studio\Source\bowling_kai\bowling_kai\bin\Debug\bowling_kai.exe.manifest
+E:\Visual Studio\Source\bowling_kai\bowling_kai\bin\Debug\bowling_kai.application
+E:\Visual Studio\Source\bowling_kai\bowling_kai\bin\Debug\bowling_kai.exe
+E:\Visual Studio\Source\bowling_kai\bowling_kai\bin\Debug\bowling_kai.pdb
+E:\Visual Studio\Source\bowling_kai\bowling_kai\bin\Debug\System.Net.Http.dll
+E:\Visual Studio\Source\bowling_kai\bowling_kai\bin\Debug\System.Net.Http.Extensions.dll
+E:\Visual Studio\Source\bowling_kai\bowling_kai\bin\Debug\System.Net.Http.Formatting.dll
+E:\Visual Studio\Source\bowling_kai\bowling_kai\bin\Debug\System.Net.Http.Primitives.dll
+E:\Visual Studio\Source\bowling_kai\bowling_kai\bin\Debug\System.Security.Cryptography.Algorithms.dll
+E:\Visual Studio\Source\bowling_kai\bowling_kai\bin\Debug\System.Security.Cryptography.Encoding.dll
+E:\Visual Studio\Source\bowling_kai\bowling_kai\bin\Debug\System.Security.Cryptography.Primitives.dll
+E:\Visual Studio\Source\bowling_kai\bowling_kai\bin\Debug\System.Security.Cryptography.X509Certificates.dll
+E:\Visual Studio\Source\bowling_kai\bowling_kai\bin\Debug\Newtonsoft.Json.dll
+E:\Visual Studio\Source\bowling_kai\bowling_kai\obj\Debug\bowling_kai.exe.manifest
+E:\Visual Studio\Source\bowling_kai\bowling_kai\obj\Debug\bowling_kai.application
+E:\Visual Studio\Source\bowling_kai\bowling_kai\obj\Debug\bowling_kai.csproj.CopyComplete
