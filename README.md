@@ -1,14 +1,12 @@
-【環境】
-・SQLServerをインストールしてください。
-https://www.microsoft.com/ja-jp/sql-server/sql-server-downloads
- 
- 【インストール手順】
+【インストール手順】
 
 1.setup.exeをダブルクリックしてください。
 
 2.「インストール」ボタンをクリックしてください。
 
-3.インストールが終わると自動的にアプリが起動します。
+3.「bowling_kai」と「Microsoft SQL Server 2016 localDB」がインストールされます。
+
+4.インストールが終わると自動的にアプリが起動します。
 
 
 【スコア登録手順】
@@ -38,4 +36,5 @@ https://www.microsoft.com/ja-jp/sql-server/sql-server-downloads
 
 ※注意：一回完全削除してしまったスコアは元に戻らないので注意してください。
 
-ver1.0.4 2018/10/03
+ver1.0.5 2021/03/30
+※「Microsoft SQL Server 2016 localDB」がインストールされていなかった場合、ダウンロードする機能を追加しました。
